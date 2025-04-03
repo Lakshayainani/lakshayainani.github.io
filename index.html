@@ -1,197 +1,602 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Lakshaya Inani</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-<!-- 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-<script>
-//   (adsbygoogle = window.adsbygoogle || []).push({
-//     google_ad_client: "ca-pub-5950427261595032",
-//     enable_page_level_ads: true
-//   });
-</script>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					
-	   				<h1 id="logo" ><a href="#">Lakshaya Inani</a></h1>
-					<p>B.E. in Computer Science.</p>
-					<p>SDET ,<a href="https://www.tickertape.in/" target="_blank" rel="noopener noreferrer">Tickertape(<a href="https://www.smallcase.com" target="_blank" rel="noopener noreferrer">Smallcase</a>)</a> .</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Things I Can Do</a></li>
-                        <li><a href="#five">Education</a></li>
-						<li><a href="#three">Projects</a></li>
-						<li><a href="#four">Contact</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshaya Inani - Software Testing & Automation Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --color-1: #FF3E3E;
+            /* Red */
+            --color-2: #FFD700;
+            /* Gold */
+            --color-3: #00CED1;
+            /* Dark Turquoise */
+            --color-4: #9370DB;
+            /* Medium Purple */
+            --color-5: #20B2AA;
+            /* Light Sea Green */
+            --color-6: #FF69B4;
+            /* Hot Pink */
+            --color-7: #4169E1;
+            /* Royal Blue */
+            --color-8: #32CD32;
+            /* Lime Green */
+            --secondary-color: #000000;
+            --text-color: #000000;
+            --light-bg: #FFFFFF;
+            --border-size: 4px;
+        }
 
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://facebook.com/lakshaya.inani" class="icon fa-facebook" target="_blank" rel="noopener noreferrer"><span class="label">Facebook</span></a></li>
-						<li><a href="https://instagram.com/lakshaya_inani" class="icon fa-instagram" target="_blank" rel="noopener noreferrer"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/lakshayainani" class="icon fa-github" target="_blank" rel="noopener noreferrer"><span class="label">Github</span></a></li>
-						<li><a href="mailto:lakshaya.inani@gmail.com" class="icon fa-envelope" target="_blank" rel="noopener noreferrer"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            border: var(--border-size) solid var(--secondary-color);
+            min-height: 100vh;
+            position: relative;
+            padding-right: 140px;
+            /* Match navbar width */
+        }
 
-				<!-- Main -->
-					<div id="main">
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(45deg, var(--color-1) 25%, transparent 25%),
+                linear-gradient(-45deg, var(--color-2) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, var(--color-3) 75%),
+                linear-gradient(-45deg, transparent 75%, var(--color-4) 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            opacity: 0.05;
+            z-index: -1;
+        }
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="I'm a Programmer"/>
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>Lakshaya Inani</h2>
-										<p>Hello, I'm Lakshaya Inani (Lucky).</p>
-									</header>
-									<p>From a young age, I've always had a sense of motivation and passion driving me forward. Whether it's exploring unique opportunities, learning additional skills, or meeting new people, I bring these values to every experience throughout my life on a personal and professional level. To learn more about me, keep exploring my site or <a href="#four">reach out directly</a>.</p>
-								</div>
-							</section>
+        .floating-icons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Things I Can Do</h3>
-									<p>No matter the role or project, I'm confident in the skill set I bring to the table. Take a look below to learn more about my specific abilities, and feel free to get in touch if you'd like to learn more.</p>
-									<ul class="feature-icons">
-										<li class="fa-code">Java</li>
-										<li class="fa-code">C</li>
-										<li class="fa-code">C++</li>
-										<li class="fa-code">Python</li>
-										<li class="fa-code">SQL</li>
-										<li class="fa-code">HTML</li>
-										<li class="fa-code">Selenium</li>
-										<li class="fa-code">Ansible</li>
-										<li class="fa-code">groovy</li>
-										<li class="fa-code">REST API</li>
-									</ul>
-								</div>
-							</section>
-                            
-                        <!-- Five -->
-                             <section id="five">
-								<div class="container">
-									<h3>Education</h3>
-									<p>My education has not only provided the foundation for the rest of my experiences, but has also made me a lifelong learner who is eager to gain more skills and knowledge. Take a look at my academics below.</p>
-									<div class="features">
-										<article>
-											<div class="inner">
-												<h4>Bachelor in Computer Science And Engineering</h4>
-												<p>B.E. in CSE from <strong>MVJ College of Engineering,Bangalore(Affiliated to VTU)</strong><br />CGPA:<b>7.1</b><br/>Year of Passing: <b>2019</b></p>
-											</div>
-										</article>
-										<article>
-											<div class="inner">
-												<h4>12<sup>th</sup></h4>
-												<p>completed my 12<sup>th</sup> standard in Science from <strong>Maheshwari International School,Kishangarh(Affiliated to CBSE)</strong><br />Percentage:<b>66%</b><br/>Year of Passing: <b>2015</b></p>
-											</div>
-										</article>
-                                        <article>
-											<div class="inner">
-												<h4>10<sup>th</sup></h4>
-												<p>completed my 10<sup>th</sup> standard from <strong>Mayoor School,Ajmer(Affiliated to CBSE)</strong><br />CGPA:<b>8.0</b><br/>Year of Passing: <b>2013</b></p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 15s infinite linear;
+            opacity: 0.1;
+        }
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>Projects</h3>
-									<p>To provide a tangible showcase of my work, I've included a portfolio of my most recent projects. Take a moment to explore below, and reach out if you're interested in learning more about what I have to offer.</p>
-									<div class="features">
-										<article>
-											<a href="#col" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4 class="col">Color Scheme Authentication for Session Passwords.</h4>
-												<p>We propose a new authentication scheme <strong>"Color Scheme Authentication"</strong>. Instead of just words we propose a system in which authentication is done using colors and numbers.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#mim" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4 class="mim">Marble Industry Management System</h4>
-												<p>The <strong>"Marble Industry Management"</strong> system is designed to solve the problems that arise in the marble industries regarding the management of the orders and work force in a marble industry.</p>
-											</div>
-										</article>
-										<article>
-											<a href="lakshayainani.github.io/speechRecognition" target="_blank" rel="noopener noreferrer" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4 class="speechRecognition">Speech To Text Converter</h4>
-												<p>The <strong>"Speech to Text Converter"</strong> system is designed to Take Voice Input and convert it to Text.</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
 
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Let's Connect</h3>
-									<p><a href="tel:+919741040399">9741040399</a></p>
-                                    <p><a href="mailto:lakshaya.inani@gmail.com">lakshaya.inani@gmail.com</a></p>
-                                    <!--
-                                    FOR SENDING MAIL TO BE DONE!
-                                    <form method="post" action="mailto:lakshaya.inani@gmail.com">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-                                    -->
-								</div>
-							</section>
-					</div>
-					
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<h3>Thank you for visiting!</h3>
-						</div>
-					</section>
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
 
-			</div>
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-	</body>
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background-color: var(--light-bg);
+            border: var(--border-size) solid var(--secondary-color);
+            margin: 2rem;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: var(--border-size) solid var(--color-1);
+            z-index: -1;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 0;
+            margin-bottom: 1rem;
+            border: var(--border-size) solid var(--secondary-color);
+            background-color: var(--color-2);
+            padding: 5px;
+        }
+
+        h1 {
+            color: var(--secondary-color);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .title {
+            color: var(--color-1);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: all 0.3s;
+            display: inline-block;
+            padding: 5px;
+            border: var(--border-size) solid var(--secondary-color);
+            background-color: var(--light-bg);
+        }
+
+        .social-links a:hover {
+            color: var(--color-3);
+            transform: translate(-5px, -5px);
+            box-shadow: 5px 5px 0 var(--secondary-color);
+        }
+
+        section {
+            background: var(--light-bg);
+            padding: 2rem;
+            margin: 2rem;
+            border: var(--border-size) solid var(--secondary-color);
+            position: relative;
+        }
+
+        section:nth-child(1)::after {
+            border-color: var(--color-1);
+        }
+
+        section:nth-child(2)::after {
+            border-color: var(--color-2);
+        }
+
+        section:nth-child(3)::after {
+            border-color: var(--color-3);
+        }
+
+        section:nth-child(4)::after {
+            border-color: var(--color-4);
+        }
+
+        section:nth-child(5)::after {
+            border-color: var(--color-5);
+        }
+
+        section:nth-child(6)::after {
+            border-color: var(--color-6);
+        }
+
+        section::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: var(--border-size) solid;
+            z-index: -1;
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        section:nth-child(1) h2::after {
+            background-color: var(--color-1);
+        }
+
+        section:nth-child(2) h2::after {
+            background-color: var(--color-2);
+        }
+
+        section:nth-child(3) h2::after {
+            background-color: var(--color-3);
+        }
+
+        section:nth-child(4) h2::after {
+            background-color: var(--color-4);
+        }
+
+        section:nth-child(5) h2::after {
+            background-color: var(--color-5);
+        }
+
+        section:nth-child(6) h2::after {
+            background-color: var(--color-6);
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: var(--border-size);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill {
+            background: var(--light-bg);
+            padding: 0.5rem 1rem;
+            border: var(--border-size) solid var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .skill:hover {
+            background-color: var(--color-7);
+            color: var(--light-bg);
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px 0 var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            header {
+                padding: 2rem 0;
+                margin: 1rem;
+            }
+
+            section {
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Update navbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 140px;
+            background: var(--light-bg);
+            border-left: var(--border-size) solid var(--secondary-color);
+            z-index: 1000;
+            padding: 1rem 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .navbar-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        .navbar-brand {
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            text-decoration: none;
+            border: var(--border-size) solid var(--color-1);
+            padding: 0.5rem;
+            background: var(--light-bg);
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+            text-align: center;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .navbar-brand:hover {
+            background: var(--color-1);
+            color: var(--light-bg);
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px 0 var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .navbar-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0px;
+            padding: 0.5rem;
+            background: var(--light-bg);
+            transition: all 0.3s;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link[href="#about"] {
+            border: var(--border-size) solid var(--color-2);
+        }
+
+        .nav-link[href="#skills"] {
+            border: var(--border-size) solid var(--color-3);
+        }
+
+        .nav-link[href="#experience"] {
+            border: var(--border-size) solid var(--color-4);
+        }
+
+        .nav-link[href="#contact"] {
+            border: var(--border-size) solid var(--color-5);
+        }
+
+        .nav-link[href="#about"]:hover {
+            background: var(--color-2);
+            color: var(--light-bg);
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px 0 var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .nav-link[href="#skills"]:hover {
+            background: var(--color-3);
+            color: var(--light-bg);
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px 0 var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .nav-link[href="#experience"]:hover {
+            background: var(--color-4);
+            color: var(--light-bg);
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px 0 var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .nav-link[href="#contact"]:hover {
+            background: var(--color-5);
+            color: var(--light-bg);
+            transform: translate(-3px, -3px);
+            box-shadow: 3px 3px 0 var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-right: 0;
+                padding-bottom: 60px;
+            }
+
+            .navbar-container {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                height: auto;
+            }
+
+            .navbar-brand {
+                margin-bottom: 0;
+            }
+
+            .navbar-links {
+                flex-direction: row;
+                margin-top: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">LAKSHAYA</a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="navbar-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="floating-icons">
+        <!-- Automation-related icons will be added here -->
+    </div>
+
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Profile Picture" class="profile-image">
+            <h1>Lakshaya Inani</h1>
+            <p class="title">Software Testing & Automation Engineer</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Experienced Software Testing and Automation Engineer with a passion for creating robust and efficient
+                testing solutions. Skilled in developing automated test frameworks and implementing quality assurance
+                processes.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">Test Automation</span>
+                <span class="skill">Selenium</span>
+                <span class="skill">Cypress</span>
+                <span class="skill">Playwright</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Python</span>
+                <span class="skill">CI/CD</span>
+                <span class="skill">API Testing</span>
+                <span class="skill">Agile Methodologies</span>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <!-- Add your experience here -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: your.email@example.com</p>
+            <p>Location: Your Location</p>
+        </section>
+    </div>
+
+    <script>
+        // Add floating icons dynamically
+        const icons = [
+            'fa-code', 'fa-bug', 'fa-cogs', 'fa-robot', 'fa-microchip',
+            'fa-server', 'fa-database', 'fa-terminal', 'fa-code-branch',
+            'fa-laptop-code', 'fa-network-wired', 'fa-memory', 'fa-microchip',
+            'fa-code-branch', 'fa-terminal', 'fa-server', 'fa-database'
+        ];
+
+        const colors = [
+            '#FF3E3E', // Red
+            '#FFD700', // Gold
+            '#00CED1', // Dark Turquoise
+            '#9370DB', // Medium Purple
+            '#20B2AA', // Light Sea Green
+            '#FF69B4', // Hot Pink
+            '#4169E1', // Royal Blue
+            '#32CD32'  // Lime Green
+        ];
+
+        const floatingIcons = document.querySelector('.floating-icons');
+
+        // Create 50 floating icons with random properties
+        for (let i = 0; i < 50; i++) {
+            const icon = document.createElement('i');
+            const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const size = Math.random() * 1.5 + 1; // Random size between 1 and 2.5rem
+            const opacity = Math.random() * 0.1 + 0.05; // Random opacity between 0.05 and 0.15
+
+            icon.className = `fas ${randomIcon} floating-icon`;
+            icon.style.left = `${Math.random() * 100}%`;
+            icon.style.top = `${Math.random() * 100}%`;
+            icon.style.fontSize = `${size}rem`;
+            icon.style.opacity = opacity;
+            icon.style.color = randomColor;
+            icon.style.animationDelay = `${Math.random() * 15}s`;
+            icon.style.animationDuration = `${Math.random() * 10 + 10}s`;
+
+            floatingIcons.appendChild(icon);
+        }
+
+        // Add mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navbarLinks = document.querySelector('.navbar-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+
+        // Smooth scroll functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const navbarHeight = 20; // Add some padding to the scroll position
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        navbarLinks.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
 </html>
