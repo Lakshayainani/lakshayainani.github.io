@@ -8,25 +8,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --color-1: #FF3E3E;
-            /* Red */
-            --color-2: #FFD700;
-            /* Gold */
-            --color-3: #00CED1;
-            /* Dark Turquoise */
-            --color-4: #9370DB;
-            /* Medium Purple */
-            --color-5: #20B2AA;
-            /* Light Sea Green */
-            --color-6: #FF69B4;
-            /* Hot Pink */
-            --color-7: #4169E1;
-            /* Royal Blue */
-            --color-8: #32CD32;
-            /* Lime Green */
-            --secondary-color: #000000;
-            --text-color: #000000;
-            --light-bg: #FFFFFF;
+            --color-1: #FFB5B5;
+            /* Pastel Red */
+            --color-2: #FFE5B4;
+            /* Pastel Orange */
+            --color-3: #98E2C6;
+            /* Pastel Turquoise */
+            --color-4: #B5B9FF;
+            /* Pastel Purple */
+            --color-5: #B4E4B4;
+            /* Pastel Green */
+            --color-6: #FFB5E8;
+            /* Pastel Pink */
+            --color-7: #B5D8FF;
+            /* Pastel Blue */
+            --color-8: #E2B4FF;
+            /* Pastel Violet */
+            --exp-color-1: #FFB5B5;
+            /* Pastel Red */
+            --exp-color-2: #FFE5B4;
+            /* Pastel Orange */
+            --exp-color-3: #98E2C6;
+            /* Pastel Turquoise */
+            --exp-color-4: #B5B9FF;
+            /* Pastel Purple */
+            --exp-color-5: #E2B4FF;
+            /* Pastel Violet */
+            --skill-color-1: #FFB5B5;
+            /* Pastel Red */
+            --skill-color-2: #FFE5B4;
+            /* Pastel Orange */
+            --skill-color-3: #98E2C6;
+            /* Pastel Turquoise */
+            --skill-color-4: #B5B9FF;
+            /* Pastel Purple */
+            --skill-color-5: #B4E4B4;
+            /* Pastel Green */
+            --skill-color-6: #FFB5E8;
+            /* Pastel Pink */
+            --skill-color-7: #B5D8FF;
+            /* Pastel Blue */
+            --skill-color-8: #E2B4FF;
+            /* Pastel Violet */
+            --secondary-color: #FFFFFF;
+            --text-color: #FFFFFF;
+            --dark-bg: #1a1a1a;
+            --darker-bg: #121212;
             --border-size: 4px;
         }
 
@@ -38,7 +65,7 @@
         }
 
         body {
-            background-color: var(--light-bg);
+            background-color: var(--dark-bg);
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
@@ -63,7 +90,7 @@
                 linear-gradient(-45deg, transparent 75%, var(--color-4) 75%);
             background-size: 20px 20px;
             background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-            opacity: 0.05;
+            opacity: 0.03;
             z-index: -1;
         }
 
@@ -107,7 +134,7 @@
         header {
             text-align: center;
             padding: 4rem 0;
-            background-color: var(--light-bg);
+            background-color: var(--darker-bg);
             border: var(--border-size) solid var(--secondary-color);
             margin: 2rem;
             position: relative;
@@ -154,97 +181,89 @@
         }
 
         .social-links a {
-            color: var(--secondary-color);
+            --link-bg-color: var(--skill-color-1);
+            color: #2A2A2A;
             font-size: 1.5rem;
             margin: 0 0.5rem;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-block;
-            padding: 5px;
+            padding: 0.5rem 1rem;
             border: var(--border-size) solid var(--secondary-color);
-            background-color: var(--light-bg);
+            background-color: var(--link-bg-color);
         }
 
         .social-links a:hover {
-            color: var(--color-3);
-            transform: translate(-5px, -5px);
-            box-shadow: 5px 5px 0 var(--secondary-color);
+            transform: translate(-4px, -4px) scale(1.05);
+            box-shadow:
+                6px 6px 0 rgba(0, 0, 0, 0.2),
+                4px 4px 0 var(--link-bg-color);
+            border-color: var(--link-bg-color);
+            filter: brightness(1.1);
+            cursor: pointer;
         }
 
         section {
-            background: var(--light-bg);
+            --outer-color: #000;
+            position: relative;
             padding: 2rem;
             margin: 2rem;
             border: var(--border-size) solid var(--secondary-color);
-            position: relative;
-        }
-
-        section:nth-child(1)::after {
-            border-color: var(--color-1);
-        }
-
-        section:nth-child(2)::after {
-            border-color: var(--color-2);
-        }
-
-        section:nth-child(3)::after {
-            border-color: var(--color-3);
-        }
-
-        section:nth-child(4)::after {
-            border-color: var(--color-4);
-        }
-
-        section:nth-child(5)::after {
-            border-color: var(--color-5);
-        }
-
-        section:nth-child(6)::after {
-            border-color: var(--color-6);
+            background: var(--darker-bg);
         }
 
         section::after {
             content: '';
             position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border: var(--border-size) solid;
+            top: calc(-2 * var(--border-size));
+            left: calc(-2 * var(--border-size));
+            right: calc(-2 * var(--border-size));
+            bottom: calc(-2 * var(--border-size));
+            border: var(--border-size) solid var(--outer-color);
+            pointer-events: none;
             z-index: -1;
+        }
+
+        section:nth-child(1)::after {
+            border-color: var(--skill-color-2);
+        }
+
+        section:nth-child(2)::after {
+            border-color: var(--skill-color-3);
+        }
+
+        section:nth-child(3)::after {
+            border-color: var(--skill-color-4);
+        }
+
+        section:nth-child(4)::after {
+            border-color: var(--skill-color-5);
+        }
+
+        section:nth-child(5)::after {
+            border-color: var(--color-6);
+        }
+
+        section:nth-child(6)::after {
+            border-color: var(--color-2);
+        }
+
+        section:nth-child(7)::after {
+            border-color: var(--color-4);
+        }
+
+        section:nth-child(8)::after {
+            border-color: var(--color-8);
         }
 
         h2 {
             color: var(--secondary-color);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
             margin-bottom: 1.5rem;
             font-size: 2rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             position: relative;
             display: inline-block;
-        }
-
-        section:nth-child(1) h2::after {
-            background-color: var(--color-1);
-        }
-
-        section:nth-child(2) h2::after {
-            background-color: var(--color-2);
-        }
-
-        section:nth-child(3) h2::after {
-            background-color: var(--color-3);
-        }
-
-        section:nth-child(4) h2::after {
-            background-color: var(--color-4);
-        }
-
-        section:nth-child(5) h2::after {
-            background-color: var(--color-5);
-        }
-
-        section:nth-child(6) h2::after {
-            background-color: var(--color-6);
         }
 
         h2::after {
@@ -254,30 +273,127 @@
             left: 0;
             width: 100%;
             height: var(--border-size);
+            background-color: var(--outer-color);
         }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
+            padding: 1rem;
         }
 
         .skill {
-            background: var(--light-bg);
+            --outer-color: #000;
+            position: relative;
             padding: 0.5rem 1rem;
-            border: var(--border-size) solid var(--secondary-color);
             font-size: 0.9rem;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            color: #2A2A2A;
+            border: var(--border-size) solid var(--secondary-color);
+            margin: 0.5rem;
+            background-color: var(--skill-bg-color);
         }
 
         .skill:hover {
-            background-color: var(--color-7);
-            color: var(--light-bg);
-            transform: translate(-3px, -3px);
-            box-shadow: 3px 3px 0 var(--secondary-color);
+            transform: translate(-4px, -4px) scale(1.05);
+            box-shadow:
+                6px 6px 0 rgba(0, 0, 0, 0.2),
+                4px 4px 0 var(--skill-bg-color);
+            border-color: var(--skill-bg-color);
+            filter: brightness(1.1);
+            cursor: pointer;
+        }
+
+        .experience {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .experience-item {
+            --exp-bg-color: var(--skill-color-1);
+            position: relative;
+            padding: 1.5rem;
+            border: var(--border-size) solid var(--secondary-color);
+            margin-bottom: 1rem;
+            color: #2A2A2A;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: var(--exp-bg-color);
+        }
+
+        .experience-item:hover {
+            transform: translate(-4px, -4px) scale(1.02);
+            cursor: pointer;
+            filter: brightness(1.1);
+            box-shadow:
+                6px 6px 0 rgba(0, 0, 0, 0.2),
+                4px 4px 0 var(--exp-bg-color);
+            border-color: var(--exp-bg-color);
+        }
+
+        .experience-item h3 {
+            color: #2A2A2A;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            padding-bottom: 0.5rem;
+        }
+
+        .experience-item .company-info {
+            padding: 0.5rem 0;
+            border-top: 2px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .experience-item .company {
+            color: #2A2A2A;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .experience-item .duration {
+            color: #2A2A2A;
+            font-style: italic;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            display: block;
+        }
+
+        .experience-item ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #2A2A2A;
+        }
+
+        .experience-item li::before {
+            content: '•';
+            position: absolute;
+            left: 0.5rem;
+            color: #2A2A2A;
         }
 
         @media (max-width: 768px) {
@@ -301,6 +417,11 @@
             .title {
                 font-size: 1.2rem;
             }
+
+            .navbar {
+                background: var(--darker-bg);
+                border-top: var(--border-size) solid var(--secondary-color);
+            }
         }
 
         /* Update navbar styles */
@@ -310,13 +431,13 @@
             right: 0;
             bottom: 0;
             width: 140px;
-            background: var(--light-bg);
+            background: var(--darker-bg);
             border-left: var(--border-size) solid var(--secondary-color);
             z-index: 1000;
             padding: 1rem 0.5rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .navbar-container {
@@ -330,11 +451,11 @@
             font-size: 1rem;
             font-weight: bold;
             text-transform: uppercase;
-            color: var(--secondary-color);
+            color: var(--skill-color-1);
             text-decoration: none;
-            border: var(--border-size) solid var(--color-1);
+            border: var(--border-size) solid var(--skill-color-1);
             padding: 0.5rem;
-            background: var(--light-bg);
+            background: var(--darker-bg);
             transition: all 0.3s;
             margin-bottom: 1rem;
             text-align: center;
@@ -345,11 +466,10 @@
         }
 
         .navbar-brand:hover {
-            background: var(--color-1);
-            color: var(--light-bg);
-            transform: translate(-3px, -3px);
-            box-shadow: 3px 3px 0 var(--secondary-color);
-            border-color: var(--secondary-color);
+            background: var(--skill-color-1);
+            color: #2A2A2A;
+            border-color: var(--skill-color-1);
+            box-shadow: 3px 3px 0 var(--skill-color-1);
         }
 
         .navbar-links {
@@ -362,66 +482,47 @@
         }
 
         .nav-link {
+            --nav-bg-color: var(--skill-color-1);
             font-size: 0.9rem;
-            color: var(--secondary-color);
+            color: #2A2A2A;
             text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0px;
             padding: 0.5rem;
-            background: var(--light-bg);
-            transition: all 0.3s;
+            background-color: var(--nav-bg-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: center;
             width: 100%;
             margin-bottom: 0.5rem;
+            border: var(--border-size) solid var(--secondary-color);
         }
 
-        .nav-link[href="#about"] {
-            border: var(--border-size) solid var(--color-2);
+        .nav-link:hover {
+            transform: translate(-4px, -4px) scale(1.05);
+            box-shadow:
+                6px 6px 0 rgba(0, 0, 0, 0.2),
+                4px 4px 0 var(--nav-bg-color);
+            border-color: var(--nav-bg-color);
+            filter: brightness(1.1);
+            cursor: pointer;
         }
 
-        .nav-link[href="#skills"] {
-            border: var(--border-size) solid var(--color-3);
-        }
-
-        .nav-link[href="#experience"] {
-            border: var(--border-size) solid var(--color-4);
-        }
-
+        /* Remove individual nav-link color assignments */
+        .nav-link[href="#about"],
+        .nav-link[href="#skills"],
+        .nav-link[href="#experience"],
         .nav-link[href="#contact"] {
-            border: var(--border-size) solid var(--color-5);
+            border: var(--border-size) solid var(--secondary-color);
+            background-color: var(--nav-bg-color);
+            color: #2A2A2A;
         }
 
-        .nav-link[href="#about"]:hover {
-            background: var(--color-2);
-            color: var(--light-bg);
-            transform: translate(-3px, -3px);
-            box-shadow: 3px 3px 0 var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-
-        .nav-link[href="#skills"]:hover {
-            background: var(--color-3);
-            color: var(--light-bg);
-            transform: translate(-3px, -3px);
-            box-shadow: 3px 3px 0 var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-
-        .nav-link[href="#experience"]:hover {
-            background: var(--color-4);
-            color: var(--light-bg);
-            transform: translate(-3px, -3px);
-            box-shadow: 3px 3px 0 var(--secondary-color);
-            border-color: var(--secondary-color);
-        }
-
+        .nav-link[href="#about"]:hover,
+        .nav-link[href="#skills"]:hover,
+        .nav-link[href="#experience"]:hover,
         .nav-link[href="#contact"]:hover {
-            background: var(--color-5);
-            color: var(--light-bg);
-            transform: translate(-3px, -3px);
-            box-shadow: 3px 3px 0 var(--secondary-color);
-            border-color: var(--secondary-color);
+            border-color: var(--nav-bg-color);
         }
 
         .mobile-menu-btn {
@@ -454,13 +555,47 @@
                 display: block;
             }
         }
+
+        /* Section borders */
+        section#about::after {
+            border-color: var(--skill-color-2) !important;
+        }
+
+        section#skills::after {
+            border-color: var(--skill-color-5) !important;
+        }
+
+        section#experience::after {
+            border-color: var(--skill-color-4) !important;
+        }
+
+        section#contact::after {
+            border-color: var(--skill-color-3) !important;
+        }
+
+        /* Update section headings to match their sections */
+        section#about h2::after {
+            background-color: var(--skill-color-2);
+        }
+
+        section#skills h2::after {
+            background-color: var(--skill-color-5);
+        }
+
+        section#experience h2::after {
+            background-color: var(--skill-color-4);
+        }
+
+        section#contact h2::after {
+            background-color: var(--skill-color-3);
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#" class="navbar-brand">LAKSHAYA</a>
+            <a href="#hero" class="navbar-brand">LAKSHAYA</a>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </button>
@@ -478,22 +613,23 @@
     </div>
 
     <div class="container">
-        <header>
-            <img src="profile.jpg" alt="Profile Picture" class="profile-image">
+        <header id="hero">
+            <img src="image.png" alt="Profile Picture" class="profile-image">
             <h1>Lakshaya Inani</h1>
-            <p class="title">Software Testing & Automation Engineer</p>
+            <p class="title">Senior Software Development Engineer in Test</p>
             <div class="social-links">
-                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/lakshayainani" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lakshayainani/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/lakshayainani" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </header>
 
         <section id="about">
             <h2>About Me</h2>
-            <p>Experienced Software Testing and Automation Engineer with a passion for creating robust and efficient
-                testing solutions. Skilled in developing automated test frameworks and implementing quality assurance
-                processes.</p>
+            <p>Senior Software Development Engineer in Test with 5+ years of experience in building and maintaining test
+                automation frameworks. Skilled in designing and implementing end-to-end test automation solutions for
+                web and mobile applications. Strong expertise in CI/CD practices and quality assurance methodologies.
+            </p>
         </section>
 
         <section id="skills">
@@ -504,22 +640,94 @@
                 <span class="skill">Cypress</span>
                 <span class="skill">Playwright</span>
                 <span class="skill">JavaScript</span>
+                <span class="skill">TypeScript</span>
                 <span class="skill">Python</span>
+                <span class="skill">Java</span>
                 <span class="skill">CI/CD</span>
+                <span class="skill">Jenkins</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Git</span>
                 <span class="skill">API Testing</span>
+                <span class="skill">Performance Testing</span>
+                <span class="skill">Mobile Testing</span>
                 <span class="skill">Agile Methodologies</span>
             </div>
         </section>
 
         <section id="experience">
             <h2>Experience</h2>
-            <!-- Add your experience here -->
+            <div class="experience">
+                <div class="experience-item">
+                    <h3>SDET 2</h3>
+                    <div class="company-info">
+                        <p class="company">smallcase</p>
+                        <p class="duration">Oct 2021 - Dec 2021</p>
+                    </div>
+                    <ul>
+                        <li>Quality Assurance Engineer for TickerTape</li>
+                        <li>Handling Functional Testing</li>
+                        <li>Web Automation</li>
+                        <li>App Testing/Automation</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>SDET</h3>
+                    <div class="company-info">
+                        <p class="company">smallcase</p>
+                        <p class="duration">Jan 2022 - Present</p>
+                    </div>
+                    <ul>
+                        <li>Quality Assurance Engineer for TickerTape</li>
+                        <li>Handling Functional Testing</li>
+                        <li>Web Automation</li>
+                        <li>App Testing/Automation</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>System/Software Engineer - 2</h3>
+                    <div class="company-info">
+                        <p class="company">Micro Focus</p>
+                        <p class="duration">Oct 2021 - Dec 2021</p>
+                    </div>
+                    <ul>
+                        <li>Quality Assurance Engineer for NetIQ Access Manager(NAM) and Risk Service</li>
+                        <li>UI Testing and Automation</li>
+                        <li>Rest API Testing and Automation</li>
+                        <li>Deployment Testing and Automation</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>System/Software Engineer - 1</h3>
+                    <div class="company-info">
+                        <p class="company">Micro Focus</p>
+                        <p class="duration">Aug 2019 - Sep 2021</p>
+                    </div>
+                    <ul>
+                        <li>Quality Assurance Engineer for NetIQ Access Manager(NAM)</li>
+                        <li>UI Testing and Automation</li>
+                        <li>Rest API Testing and Automation</li>
+                        <li>Deployment Testing and Automation</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3>Software Engineering Intern</h3>
+                    <div class="company-info">
+                        <p class="company">Micro Focus</p>
+                        <p class="duration">Jan 2019 - July 2019</p>
+                    </div>
+                    <ul>
+                        <li>Learned about Software Development Lifecycle</li>
+                        <li>Studied cybersecurity</li>
+                        <li>Learned Selenium Automation Basics</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>Location: Your Location</p>
+            <p>Email: lakshaya.inani@gmail.com</p>
+            <p>Location: Bangalore, India</p>
         </section>
     </div>
 
@@ -532,16 +740,115 @@
             'fa-code-branch', 'fa-terminal', 'fa-server', 'fa-database'
         ];
 
-        const colors = [
-            '#FF3E3E', // Red
-            '#FFD700', // Gold
-            '#00CED1', // Dark Turquoise
-            '#9370DB', // Medium Purple
-            '#20B2AA', // Light Sea Green
-            '#FF69B4', // Hot Pink
-            '#4169E1', // Royal Blue
-            '#32CD32'  // Lime Green
+        // Define the color palette for skills
+        const skillColors = [
+            '#FFB5B5', // Pastel Red
+            '#FFE5B4', // Pastel Orange
+            '#98E2C6', // Pastel Turquoise
+            '#B5B9FF', // Pastel Purple
+            '#B4E4B4', // Pastel Green
+            '#FFB5E8', // Pastel Pink
+            '#B5D8FF', // Pastel Blue
+            '#E2B4FF', // Pastel Violet
+            '#FFD1A1', // Pastel Peach
+            '#C1FFC1', // Light Mint
+            '#D4A5FF', // Light Purple
+            '#A5D6FF', // Light Sky Blue
+            '#FFC8C8', // Light Coral
+            '#E6FFE6', // Light Honeydew
+            '#FFE1FF', // Light Pink
+            '#B5E6B5', // Mint Green
+            '#FFB6C1', // Light Pink
+            '#87CEEB', // Sky Blue
+            '#DDA0DD', // Plum
+            '#98FB98'  // Pale Green
         ];
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function assignRandomColors() {
+            // Get all elements that need colors
+            const skills = document.querySelectorAll('.skill');
+            const socialLinks = document.querySelectorAll('.social-links a');
+
+            // Calculate total number of elements needing colors
+            const totalElements = skills.length + socialLinks.length;
+
+            // Create arrays of repeated colors if needed to cover all elements
+            let extendedColors = [];
+            while (extendedColors.length < totalElements) {
+                extendedColors = extendedColors.concat(skillColors);
+            }
+
+            // Shuffle and slice to get exactly the number of colors we need
+            const shuffledColors = shuffleArray([...extendedColors]).slice(0, totalElements);
+            let colorIndex = 0;
+
+            // Assign unique colors to skills
+            skills.forEach(skill => {
+                skill.style.setProperty('--skill-bg-color', shuffledColors[colorIndex++]);
+            });
+
+            // Assign unique colors to social links
+            socialLinks.forEach(link => {
+                link.style.setProperty('--link-bg-color', shuffledColors[colorIndex++]);
+            });
+
+            // Set fixed colors for nav links matching their section themes
+            const aboutNav = document.querySelector('.nav-link[href="#about"]');
+            const skillsNav = document.querySelector('.nav-link[href="#skills"]');
+            const experienceNav = document.querySelector('.nav-link[href="#experience"]');
+            const contactNav = document.querySelector('.nav-link[href="#contact"]');
+
+            aboutNav.style.setProperty('--nav-bg-color', 'var(--skill-color-2)');
+            skillsNav.style.setProperty('--nav-bg-color', 'var(--skill-color-5)');
+            experienceNav.style.setProperty('--nav-bg-color', 'var(--skill-color-4)');
+            contactNav.style.setProperty('--nav-bg-color', 'var(--skill-color-3)');
+
+            // Assign unique colors to experience cards
+            const shuffledColorsForExp = shuffleArray([...skillColors]);
+            document.querySelectorAll('.experience-item').forEach((card, index) => {
+                const uniqueColor = shuffledColorsForExp[index % shuffledColorsForExp.length];
+                card.style.setProperty('--exp-bg-color', uniqueColor);
+            });
+        }
+
+        // Call the function when the page loads
+        window.addEventListener('load', assignRandomColors);
+
+        // Add refresh on click functionality only for skills section
+        document.querySelector('#skills').addEventListener('click', assignRandomColors);
+
+        // Smooth scroll functionality without color refresh
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const navbarHeight = 20;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Only handle mobile menu if needed
+                    if (window.innerWidth <= 768) {
+                        const navbarLinks = document.querySelector('.navbar-links');
+                        navbarLinks.classList.remove('active');
+                    }
+                }
+            });
+        });
 
         const floatingIcons = document.querySelector('.floating-icons');
 
@@ -549,9 +856,9 @@
         for (let i = 0; i < 50; i++) {
             const icon = document.createElement('i');
             const randomIcon = icons[Math.floor(Math.random() * icons.length)];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            const size = Math.random() * 1.5 + 1; // Random size between 1 and 2.5rem
-            const opacity = Math.random() * 0.1 + 0.05; // Random opacity between 0.05 and 0.15
+            const randomColor = skillColors[Math.floor(Math.random() * skillColors.length)];
+            const size = Math.random() * 1.5 + 1;
+            const opacity = Math.random() * 0.1 + 0.05;
 
             icon.className = `fas ${randomIcon} floating-icon`;
             icon.style.left = `${Math.random() * 100}%`;
@@ -571,30 +878,6 @@
 
         mobileMenuBtn.addEventListener('click', () => {
             navbarLinks.classList.toggle('active');
-        });
-
-        // Smooth scroll functionality
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    const navbarHeight = 20; // Add some padding to the scroll position
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 768) {
-                        navbarLinks.classList.remove('active');
-                    }
-                }
-            });
         });
     </script>
 </body>
