@@ -6,598 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lakshaya Inani - Software Testing & Automation Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --color-1: #FFB5B5;
-            /* Pastel Red */
-            --color-2: #FFE5B4;
-            /* Pastel Orange */
-            --color-3: #98E2C6;
-            /* Pastel Turquoise */
-            --color-4: #B5B9FF;
-            /* Pastel Purple */
-            --color-5: #B4E4B4;
-            /* Pastel Green */
-            --color-6: #FFB5E8;
-            /* Pastel Pink */
-            --color-7: #B5D8FF;
-            /* Pastel Blue */
-            --color-8: #E2B4FF;
-            /* Pastel Violet */
-            --exp-color-1: #FFB5B5;
-            /* Pastel Red */
-            --exp-color-2: #FFE5B4;
-            /* Pastel Orange */
-            --exp-color-3: #98E2C6;
-            /* Pastel Turquoise */
-            --exp-color-4: #B5B9FF;
-            /* Pastel Purple */
-            --exp-color-5: #E2B4FF;
-            /* Pastel Violet */
-            --skill-color-1: #FFB5B5;
-            /* Pastel Red */
-            --skill-color-2: #FFE5B4;
-            /* Pastel Orange */
-            --skill-color-3: #98E2C6;
-            /* Pastel Turquoise */
-            --skill-color-4: #B5B9FF;
-            /* Pastel Purple */
-            --skill-color-5: #B4E4B4;
-            /* Pastel Green */
-            --skill-color-6: #FFB5E8;
-            /* Pastel Pink */
-            --skill-color-7: #B5D8FF;
-            /* Pastel Blue */
-            --skill-color-8: #E2B4FF;
-            /* Pastel Violet */
-            --secondary-color: #FFFFFF;
-            --text-color: #FFFFFF;
-            --dark-bg: #1a1a1a;
-            --darker-bg: #121212;
-            --border-size: 4px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
-        }
-
-        body {
-            background-color: var(--dark-bg);
-
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-            border: var(--border-size) solid var(--secondary-color);
-            min-height: 100vh;
-            position: relative;
-            padding-right: 140px;
-            /* Match navbar width */
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                linear-gradient(45deg, var(--color-1) 25%, transparent 25%),
-                linear-gradient(-45deg, var(--color-2) 25%, transparent 25%),
-                linear-gradient(45deg, transparent 75%, var(--color-3) 75%),
-                linear-gradient(-45deg, transparent 75%, var(--color-4) 75%);
-            background-size: 20px 20px;
-            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-            opacity: 0.03;
-            z-index: -1;
-        }
-
-        .floating-icons {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .floating-icon {
-            position: absolute;
-            font-size: 2rem;
-            animation: float 15s infinite linear;
-            opacity: 0.1;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-20px) rotate(180deg);
-            }
-
-            100% {
-                transform: translateY(0) rotate(360deg);
-            }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            text-align: center;
-            padding: 4rem 0;
-            background-color: var(--darker-bg);
-            border: var(--border-size) solid var(--secondary-color);
-            margin: 2rem;
-            position: relative;
-        }
-
-        header::after {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border: var(--border-size) solid var(--color-1);
-            z-index: -1;
-        }
-
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 0;
-            margin-bottom: 1rem;
-            border: var(--border-size) solid var(--secondary-color);
-            background-color: var(--color-2);
-            padding: 5px;
-        }
-
-        h1 {
-            color: var(--secondary-color);
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .title {
-            color: var(--color-1);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
-
-        .social-links {
-            margin: 1rem 0;
-        }
-
-        .social-links a {
-            --link-bg-color: var(--skill-color-1);
-            color: #2A2A2A;
-            font-size: 1.5rem;
-            margin: 0 0.5rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            border: var(--border-size) solid var(--secondary-color);
-            background-color: var(--link-bg-color);
-        }
-
-        .social-links a:hover {
-            transform: translate(-4px, -4px) scale(1.05);
-            box-shadow:
-                6px 6px 0 rgba(0, 0, 0, 0.2),
-                4px 4px 0 var(--link-bg-color);
-            border-color: var(--link-bg-color);
-            filter: brightness(1.1);
-            cursor: pointer;
-        }
-
-        section {
-            --outer-color: #000;
-            position: relative;
-            padding: 2rem;
-            margin: 2rem;
-            border: var(--border-size) solid var(--secondary-color);
-            background: var(--darker-bg);
-        }
-
-        section::after {
-            content: '';
-            position: absolute;
-            top: calc(-2 * var(--border-size));
-            left: calc(-2 * var(--border-size));
-            right: calc(-2 * var(--border-size));
-            bottom: calc(-2 * var(--border-size));
-            border: var(--border-size) solid var(--outer-color);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        section:nth-child(1)::after {
-            border-color: var(--skill-color-2);
-        }
-
-        section:nth-child(2)::after {
-            border-color: var(--skill-color-3);
-        }
-
-        section:nth-child(3)::after {
-            border-color: var(--skill-color-4);
-        }
-
-        section:nth-child(4)::after {
-            border-color: var(--skill-color-5);
-        }
-
-        section:nth-child(5)::after {
-            border-color: var(--color-6);
-        }
-
-        section:nth-child(6)::after {
-            border-color: var(--color-2);
-        }
-
-        section:nth-child(7)::after {
-            border-color: var(--color-4);
-        }
-
-        section:nth-child(8)::after {
-            border-color: var(--color-8);
-        }
-
-        h2 {
-            color: var(--secondary-color);
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            display: inline-block;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: var(--border-size);
-            background-color: var(--outer-color);
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            padding: 1rem;
-        }
-
-        .skill {
-            --outer-color: #000;
-            position: relative;
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            color: #2A2A2A;
-            border: var(--border-size) solid var(--secondary-color);
-            margin: 0.5rem;
-            background-color: var(--skill-bg-color);
-        }
-
-        .skill:hover {
-            transform: translate(-4px, -4px) scale(1.05);
-            box-shadow:
-                6px 6px 0 rgba(0, 0, 0, 0.2),
-                4px 4px 0 var(--skill-bg-color);
-            border-color: var(--skill-bg-color);
-            filter: brightness(1.1);
-            cursor: pointer;
-        }
-
-        .experience {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 1rem;
-        }
-
-        .experience-item {
-            --exp-bg-color: var(--skill-color-1);
-            position: relative;
-            padding: 1.5rem;
-            border: var(--border-size) solid var(--secondary-color);
-            margin-bottom: 1rem;
-            color: #2A2A2A;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background-color: var(--exp-bg-color);
-        }
-
-        .experience-item:hover {
-            transform: translate(-4px, -4px) scale(1.02);
-            cursor: pointer;
-            filter: brightness(1.1);
-            box-shadow:
-                6px 6px 0 rgba(0, 0, 0, 0.2),
-                4px 4px 0 var(--exp-bg-color);
-            border-color: var(--exp-bg-color);
-        }
-
-        .experience-item h3 {
-            color: #2A2A2A;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            padding-bottom: 0.5rem;
-        }
-
-        .experience-item .company-info {
-            padding: 0.5rem 0;
-            border-top: 2px solid rgba(0, 0, 0, 0.1);
-            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-            margin-bottom: 1rem;
-        }
-
-        .experience-item .company {
-            color: #2A2A2A;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 0.5rem 1rem;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 3px;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .experience-item .duration {
-            color: #2A2A2A;
-            font-style: italic;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 3px;
-            display: block;
-        }
-
-        .experience-item ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 0;
-        }
-
-        .experience-item li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-            color: #2A2A2A;
-        }
-
-        .experience-item li::before {
-            content: '•';
-            position: absolute;
-            left: 0.5rem;
-            color: #2A2A2A;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            header {
-                padding: 2rem 0;
-                margin: 1rem;
-            }
-
-            section {
-                margin: 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .title {
-                font-size: 1.2rem;
-            }
-
-            .navbar {
-                background: var(--darker-bg);
-                border-top: var(--border-size) solid var(--secondary-color);
-            }
-
-        }
-
-        /* Update navbar styles */
-        .navbar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 140px;
-            background: var(--darker-bg);
-            border-left: var(--border-size) solid var(--secondary-color);
-            z-index: 1000;
-            padding: 1rem 0.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .navbar-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-        }
-
-        .navbar-brand {
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: var(--skill-color-1);
-            text-decoration: none;
-            border: var(--border-size) solid var(--skill-color-1);
-            padding: 0.5rem;
-            background: var(--darker-bg);
-            transition: all 0.3s;
-            margin-bottom: 1rem;
-            text-align: center;
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .navbar-brand:hover {
-            background: var(--skill-color-1);
-            color: #2A2A2A;
-            border-color: var(--skill-color-1);
-            box-shadow: 3px 3px 0 var(--skill-color-1);
-        }
-
-        .navbar-links {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: center;
-            width: 100%;
-            margin-top: auto;
-        }
-
-        .nav-link {
-            --nav-bg-color: var(--skill-color-1);
-            font-size: 0.9rem;
-            color: #2A2A2A;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0px;
-            padding: 0.5rem;
-            background-color: var(--nav-bg-color);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-align: center;
-            width: 100%;
-            margin-bottom: 0.5rem;
-            border: var(--border-size) solid var(--secondary-color);
-        }
-
-        .nav-link:hover {
-            transform: translate(-4px, -4px) scale(1.05);
-            box-shadow:
-                6px 6px 0 rgba(0, 0, 0, 0.2),
-                4px 4px 0 var(--nav-bg-color);
-            border-color: var(--nav-bg-color);
-            filter: brightness(1.1);
-            cursor: pointer;
-        }
-
-        /* Remove individual nav-link color assignments */
-        .nav-link[href="#about"],
-        .nav-link[href="#skills"],
-        .nav-link[href="#experience"],
-        .nav-link[href="#contact"] {
-            border: var(--border-size) solid var(--secondary-color);
-            background-color: var(--nav-bg-color);
-            color: #2A2A2A;
-        }
-
-        .nav-link[href="#about"]:hover,
-        .nav-link[href="#skills"]:hover,
-        .nav-link[href="#experience"]:hover,
-        .nav-link[href="#contact"]:hover {
-            border-color: var(--nav-bg-color);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding-right: 0;
-                padding-bottom: 60px;
-            }
-
-            .navbar-container {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                height: auto;
-            }
-
-            .navbar-brand {
-                margin-bottom: 0;
-            }
-
-            .navbar-links {
-                flex-direction: row;
-                margin-top: 0;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-        }
-
-        /* Section borders */
-        section#about::after {
-            border-color: var(--skill-color-2) !important;
-        }
-
-        section#skills::after {
-            border-color: var(--skill-color-5) !important;
-        }
-
-        section#experience::after {
-            border-color: var(--skill-color-4) !important;
-        }
-
-        section#contact::after {
-            border-color: var(--skill-color-3) !important;
-        }
-
-        /* Update section headings to match their sections */
-        section#about h2::after {
-            background-color: var(--skill-color-2);
-        }
-
-        section#skills h2::after {
-            background-color: var(--skill-color-5);
-        }
-
-        section#experience h2::after {
-            background-color: var(--skill-color-4);
-        }
-
-        section#contact h2::after {
-            background-color: var(--skill-color-3);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-
             <a href="#hero" class="navbar-brand">LAKSHAYA</a>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -623,35 +37,46 @@
             <div class="social-links">
                 <a href="https://github.com/lakshayainani" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/lakshayainani/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/lakshayainani" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:lakshaya.inani@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://lakshayainani.com" target="_blank"><i class="fas fa-globe"></i></a>
+                <a href="tel:+919741040399"><i class="fas fa-phone"></i></a>
             </div>
         </header>
 
         <section id="about">
             <h2>About Me</h2>
-            <p>Senior Software Development Engineer in Test with 5+ years of experience in building and maintaining test
-                automation frameworks. Skilled in designing and implementing end-to-end test automation solutions for
-                web and mobile applications. Strong expertise in CI/CD practices and quality assurance methodologies.
+            <p>
+                As a <b>SDET 2</b> at TickerTape</a>, a Fintech
+                platform that provides insights and analysis for stock market investors, I am responsible for ensuring
+                the best quality experience for the users of the app and website. I use Selenium Automation, Python,
+                Rest API Testing, Mobile testing, Appium and jenkins to design, develop, and execute test cases and
+                scenarios, as well as to identify and report bugs and issues.
+            </p>
+            <p>
+                I have a BE degree in <b>Computer Software Engineering</b> from MVJ College of Engineering, where I
+                learned the
+                fundamentals of software development, data structures, algorithms, and databases. I also have multiple
+                certifications in Python, Docker, and Java which demonstrate my passion and curiosity for learning new
+                technologies and skills. I also have some experience working with Databases (SQL, noSQL), performance
+                and load testing.
             </p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
             <div class="skills">
-                <span class="skill">Test Automation</span>
-                <span class="skill">Selenium</span>
-                <span class="skill">Cypress</span>
-                <span class="skill">Playwright</span>
-                <span class="skill">JavaScript</span>
-                <span class="skill">TypeScript</span>
-                <span class="skill">Python</span>
                 <span class="skill">Java</span>
-                <span class="skill">CI/CD</span>
+                <span class="skill">Selenium</span>
+                <span class="skill">Python</span>
+                <span class="skill">Test Automation</span>
+                <span class="skill">pytest</span>
+                <span class="skill">Maestro</span>
                 <span class="skill">Jenkins</span>
+                <span class="skill">Ansible</span>
                 <span class="skill">Docker</span>
                 <span class="skill">Git</span>
                 <span class="skill">API Testing</span>
-                <span class="skill">Performance Testing</span>
+                <span class="skill">API Automation</span>
                 <span class="skill">Mobile Testing</span>
                 <span class="skill">Agile Methodologies</span>
             </div>
@@ -663,33 +88,46 @@
                 <div class="experience-item">
                     <h3>SDET 2</h3>
                     <div class="company-info">
-                        <p class="company">smallcase</p>
-                        <p class="duration">Oct 2021 - Dec 2021</p>
+                        <p class="company"><a href="https://www.smallcase.com/" target="_blank">Smallcase</a>(<a
+                                href="https://www.tickertape.in/" target="_blank">Tickertape</a>)</p>
+                        <p class="duration">May 2023 - Present</p>
                     </div>
                     <ul>
-                        <li>Quality Assurance Engineer for TickerTape</li>
-                        <li>Handling Functional Testing</li>
-                        <li>Web Automation</li>
-                        <li>App Testing/Automation</li>
+                        <li><b>API Automation</b>: Achieved over 90% API test coverage, significantly improving
+                            reliability.
+                        </li>
+                        <li><b>API Efficiency</b>: Optimized API automation, reducing execution time by over 50% for
+                            faster
+                            feedback.</li>
+                        <li><b>UI Automation</b>: Contributed to the growth of the UI automation framework in
+                            collaboration
+                            with the team.</li>
+                        <li><b>LAMF Feature</b>: Key QA contributor for the LAMF feature, ensuring quality through
+                            cross-functional teamwork and contributing to positive revenue impact.</li>
                     </ul>
                 </div>
                 <div class="experience-item">
                     <h3>SDET</h3>
                     <div class="company-info">
-                        <p class="company">smallcase</p>
-                        <p class="duration">Jan 2022 - Present</p>
+                        <p class="company"><a href="https://www.smallcase.com/" target="_blank">Smallcase</a>(<a
+                                href="https://www.tickertape.in/" target="_blank">Tickertape</a>)</p>
+                        <p class="duration">Jan 2022 - May 2023</p>
                     </div>
                     <ul>
-                        <li>Quality Assurance Engineer for TickerTape</li>
-                        <li>Handling Functional Testing</li>
-                        <li>Web Automation</li>
-                        <li>App Testing/Automation</li>
+                        <li>As part of the QA Team, I ensured the best possible user experience for the Tickertape App
+                            and
+                            Website.</li>
+                        <li>I conducted the Proof of Concept (PoC) to select the appropriate automation framework for
+                            API automation and did the setup process.</li>
+                        <li>I enhanced the coverage of UI automation execution.</li>
+                        <li>I tested and delivered numerous high-quality features for the Tickertape app and website.
+                        </li>
                     </ul>
                 </div>
                 <div class="experience-item">
                     <h3>System/Software Engineer - 2</h3>
                     <div class="company-info">
-                        <p class="company">Micro Focus</p>
+                        <p class="company"><a href="https://www.microfocus.com/" target="_blank">Micro Focus</a></p>
                         <p class="duration">Oct 2021 - Dec 2021</p>
                     </div>
                     <ul>
@@ -702,7 +140,7 @@
                 <div class="experience-item">
                     <h3>System/Software Engineer - 1</h3>
                     <div class="company-info">
-                        <p class="company">Micro Focus</p>
+                        <p class="company"><a href="https://www.microfocus.com/" target="_blank">Micro Focus</a></p>
                         <p class="duration">Aug 2019 - Sep 2021</p>
                     </div>
                     <ul>
@@ -715,7 +153,7 @@
                 <div class="experience-item">
                     <h3>Software Engineering Intern</h3>
                     <div class="company-info">
-                        <p class="company">Micro Focus</p>
+                        <p class="company"><a href="https://www.microfocus.com/" target="_blank">Micro Focus</a></p>
                         <p class="duration">Jan 2019 - July 2019</p>
                     </div>
                     <ul>
@@ -725,164 +163,19 @@
                     </ul>
                 </div>
             </div>
-
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: lakshaya.inani@gmail.com</p>
+            <p>Email: <a href="mailto:lakshaya.inani@gmail.com">lakshaya.inani@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919741040399">+91-9741040399</a></p>
             <p>Location: Bangalore, India</p>
+            <p><a href="https://www.linkedin.com/in/lakshayainani/message/" target="_blank" class="linkedin-msg">👋 Say
+                    Hi on LinkedIn</a></p>
         </section>
     </div>
 
-    <script>
-        // Add floating icons dynamically
-        const icons = [
-            'fa-code', 'fa-bug', 'fa-cogs', 'fa-robot', 'fa-microchip',
-            'fa-server', 'fa-database', 'fa-terminal', 'fa-code-branch',
-            'fa-laptop-code', 'fa-network-wired', 'fa-memory', 'fa-microchip',
-            'fa-code-branch', 'fa-terminal', 'fa-server', 'fa-database'
-        ];
-
-        // Define the color palette for skills
-        const skillColors = [
-            '#FFB5B5', // Pastel Red
-            '#FFE5B4', // Pastel Orange
-            '#98E2C6', // Pastel Turquoise
-            '#B5B9FF', // Pastel Purple
-            '#B4E4B4', // Pastel Green
-            '#FFB5E8', // Pastel Pink
-            '#B5D8FF', // Pastel Blue
-            '#E2B4FF', // Pastel Violet
-            '#FFD1A1', // Pastel Peach
-            '#C1FFC1', // Light Mint
-            '#D4A5FF', // Light Purple
-            '#A5D6FF', // Light Sky Blue
-            '#FFC8C8', // Light Coral
-            '#E6FFE6', // Light Honeydew
-            '#FFE1FF', // Light Pink
-            '#B5E6B5', // Mint Green
-            '#FFB6C1', // Light Pink
-            '#87CEEB', // Sky Blue
-            '#DDA0DD', // Plum
-            '#98FB98'  // Pale Green
-        ];
-
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        function assignRandomColors() {
-            // Get all elements that need colors
-            const skills = document.querySelectorAll('.skill');
-            const socialLinks = document.querySelectorAll('.social-links a');
-
-            // Calculate total number of elements needing colors
-            const totalElements = skills.length + socialLinks.length;
-
-            // Create arrays of repeated colors if needed to cover all elements
-            let extendedColors = [];
-            while (extendedColors.length < totalElements) {
-                extendedColors = extendedColors.concat(skillColors);
-            }
-
-            // Shuffle and slice to get exactly the number of colors we need
-            const shuffledColors = shuffleArray([...extendedColors]).slice(0, totalElements);
-            let colorIndex = 0;
-
-            // Assign unique colors to skills
-            skills.forEach(skill => {
-                skill.style.setProperty('--skill-bg-color', shuffledColors[colorIndex++]);
-            });
-
-            // Assign unique colors to social links
-            socialLinks.forEach(link => {
-                link.style.setProperty('--link-bg-color', shuffledColors[colorIndex++]);
-            });
-
-            // Set fixed colors for nav links matching their section themes
-            const aboutNav = document.querySelector('.nav-link[href="#about"]');
-            const skillsNav = document.querySelector('.nav-link[href="#skills"]');
-            const experienceNav = document.querySelector('.nav-link[href="#experience"]');
-            const contactNav = document.querySelector('.nav-link[href="#contact"]');
-
-            aboutNav.style.setProperty('--nav-bg-color', 'var(--skill-color-2)');
-            skillsNav.style.setProperty('--nav-bg-color', 'var(--skill-color-5)');
-            experienceNav.style.setProperty('--nav-bg-color', 'var(--skill-color-4)');
-            contactNav.style.setProperty('--nav-bg-color', 'var(--skill-color-3)');
-
-            // Assign unique colors to experience cards
-            const shuffledColorsForExp = shuffleArray([...skillColors]);
-            document.querySelectorAll('.experience-item').forEach((card, index) => {
-                const uniqueColor = shuffledColorsForExp[index % shuffledColorsForExp.length];
-                card.style.setProperty('--exp-bg-color', uniqueColor);
-            });
-        }
-
-        // Call the function when the page loads
-        window.addEventListener('load', assignRandomColors);
-
-        // Add refresh on click functionality only for skills section
-        document.querySelector('#skills').addEventListener('click', assignRandomColors);
-
-        // Smooth scroll functionality without color refresh
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    const navbarHeight = 20;
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-
-                    // Only handle mobile menu if needed
-                    if (window.innerWidth <= 768) {
-                        const navbarLinks = document.querySelector('.navbar-links');
-                        navbarLinks.classList.remove('active');
-                    }
-                }
-            });
-        });
-        const floatingIcons = document.querySelector('.floating-icons');
-
-        // Create 50 floating icons with random properties
-        for (let i = 0; i < 50; i++) {
-            const icon = document.createElement('i');
-            const randomIcon = icons[Math.floor(Math.random() * icons.length)];
-            const randomColor = skillColors[Math.floor(Math.random() * skillColors.length)];
-            const size = Math.random() * 1.5 + 1;
-            const opacity = Math.random() * 0.1 + 0.05;
-
-            icon.className = `fas ${randomIcon} floating-icon`;
-            icon.style.left = `${Math.random() * 100}%`;
-            icon.style.top = `${Math.random() * 100}%`;
-            icon.style.fontSize = `${size}rem`;
-            icon.style.opacity = opacity;
-            icon.style.color = randomColor;
-            icon.style.animationDelay = `${Math.random() * 15}s`;
-            icon.style.animationDuration = `${Math.random() * 10 + 10}s`;
-
-            floatingIcons.appendChild(icon);
-        }
-
-        // Add mobile menu functionality
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navbarLinks = document.querySelector('.navbar-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navbarLinks.classList.toggle('active');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
