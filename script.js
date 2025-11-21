@@ -85,6 +85,11 @@ function assignRandomColors() {
         projectsNav.style.setProperty('--nav-bg-color', 'var(--skill-color-6)');
     }
 
+    const projectsNav = document.querySelector('.nav-link[href="#projects"]');
+    if (projectsNav) {
+        projectsNav.style.setProperty('--nav-bg-color', 'var(--skill-color-6)');
+    }
+
     // Assign unique colors to experience cards
     const shuffledColorsForExp = shuffleArray([...skillColors]);
     document.querySelectorAll('.experience-item').forEach((card, index) => {
