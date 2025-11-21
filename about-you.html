@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About You - What Websites Know About You</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific styles */
+        .back-button {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 1001;
+            padding: 0.75rem 1.5rem;
+            background: var(--skill-color-1);
+            color: #2A2A2A;
+            text-decoration: none;
+            font-weight: bold;
+            border: var(--border-size) solid var(--secondary-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-button:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2), 4px 4px 0 var(--skill-color-1);
+        }
+
+        @media (max-width: 768px) {
+            .back-button {
+                top: 1rem;
+                left: 1rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Center align the section content */
+        #about-you {
+            text-align: center;
+        }
+
+        .about-you-intro {
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <div class="container">
+        <header>
+            <h1>🔍 About You</h1>
+            <p style="color: var(--skill-color-7); max-width: 800px; margin: 0 auto; font-size: 1.2rem;">Ever wondered
+                what information websites can gather about you? This page demonstrates the full extent of
+                data collection, visitor analytics, and browser fingerprinting techniques used across the web.</p>
+        </header>
+
+        <section id="about-you" class="reveal active">
+            <h2>Your Digital Footprint</h2>
+            <p class="about-you-intro">Here's everything I can detect about you right now:</p>
+
+            <div class="about-you-grid">
+                <div class="info-card">
+                    <h3>🌐 Your Location</h3>
+                    <div class="info-content">
+                        <p><strong>IP Address:</strong> <span id="user-ip">Loading...</span></p>
+                        <p><strong>Country:</strong> <span id="user-country">Loading...</span></p>
+                        <p><strong>City:</strong> <span id="user-city">Loading...</span></p>
+                        <p><strong>Region:</strong> <span id="user-region">Loading...</span></p>
+                        <p><strong>Timezone:</strong> <span id="user-timezone">Loading...</span></p>
+                        <p><strong>Postal Code:</strong> <span id="user-postal">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>💻 Your Browser</h3>
+                    <div class="info-content">
+                        <p><strong>Browser:</strong> <span id="user-browser">Loading...</span></p>
+                        <p><strong>Version:</strong> <span id="user-browser-version">Loading...</span></p>
+                        <p><strong>Engine:</strong> <span id="user-engine">Loading...</span></p>
+                        <p><strong>Language:</strong> <span id="user-language">Loading...</span></p>
+                        <p><strong>Cookies:</strong> <span id="user-cookies">Loading...</span></p>
+                        <p><strong>Do Not Track:</strong> <span id="user-dnt">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🖥️ Your System</h3>
+                    <div class="info-content">
+                        <p><strong>OS:</strong> <span id="user-os">Loading...</span></p>
+                        <p><strong>Platform:</strong> <span id="user-platform">Loading...</span></p>
+                        <p><strong>Screen:</strong> <span id="user-screen">Loading...</span></p>
+                        <p><strong>Viewport:</strong> <span id="user-viewport">Loading...</span></p>
+                        <p><strong>Color Depth:</strong> <span id="user-color">Loading...</span></p>
+                        <p><strong>Pixel Ratio:</strong> <span id="user-pixel-ratio">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>⏰ Your Session</h3>
+                    <div class="info-content">
+                        <p><strong>Local Time:</strong> <span id="user-time">Loading...</span></p>
+                        <p><strong>Visit Date:</strong> <span id="user-date">Loading...</span></p>
+                        <p><strong>Time on Page:</strong> <span id="user-duration">0s</span></p>
+                        <p><strong>Connection:</strong> <span id="user-connection">Loading...</span></p>
+                        <p><strong>Online:</strong> <span id="user-online">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>📱 Device & Hardware</h3>
+                    <div class="info-content">
+                        <p><strong>Device Type:</strong> <span id="user-device-type">Loading...</span></p>
+                        <p><strong>CPU Cores:</strong> <span id="user-cores">Loading...</span></p>
+                        <p><strong>Memory:</strong> <span id="user-memory">Loading...</span></p>
+                        <p><strong>Touch Support:</strong> <span id="user-touch">Loading...</span></p>
+                        <p><strong>Orientation:</strong> <span id="user-orientation">Loading...</span></p>
+                        <p><strong>Battery:</strong> <span id="user-battery">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🌍 Network & ISP</h3>
+                    <div class="info-content">
+                        <p><strong>ISP:</strong> <span id="user-isp">Loading...</span></p>
+                        <p><strong>Organization:</strong> <span id="user-org">Loading...</span></p>
+                        <p><strong>ASN:</strong> <span id="user-asn">Loading...</span></p>
+                        <p><strong>Latitude:</strong> <span id="user-lat">Loading...</span></p>
+                        <p><strong>Longitude:</strong> <span id="user-lon">Loading...</span></p>
+                        <p><strong>Currency:</strong> <span id="user-currency">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🔧 Browser Capabilities</h3>
+                    <div class="info-content">
+                        <p><strong>JavaScript:</strong> <span id="user-js">Enabled ✅</span></p>
+                        <p><strong>Local Storage:</strong> <span id="user-localstorage">Loading...</span></p>
+                        <p><strong>Session Storage:</strong> <span id="user-sessionstorage">Loading...</span></p>
+                        <p><strong>WebGL:</strong> <span id="user-webgl">Loading...</span></p>
+                        <p><strong>Canvas:</strong> <span id="user-canvas">Loading...</span></p>
+                        <p><strong>Geolocation API:</strong> <span id="user-geolocation">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>📊 Visitor Analytics</h3>
+                    <div class="info-content">
+                        <p><strong>Referrer:</strong> <span id="user-referrer">Loading...</span></p>
+                        <p><strong>Visitor Type:</strong> <span id="user-visitor-type">Loading...</span></p>
+                        <p><strong>Session ID:</strong> <span id="user-session-id">Loading...</span></p>
+                        <p><strong>Page Views:</strong> <span id="user-page-views">Loading...</span></p>
+                        <p><strong>Previous Page:</strong> <span id="user-previous-page">Loading...</span></p>
+                        <p><strong>Entry Time:</strong> <span id="user-entry-time">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🔍 Browser Fingerprint</h3>
+                    <div class="info-content">
+                        <p><strong>Canvas Hash:</strong> <span id="user-canvas-hash">Loading...</span></p>
+                        <p><strong>Fonts Detected:</strong> <span id="user-fonts">Loading...</span></p>
+                        <p><strong>Plugins:</strong> <span id="user-plugins">Loading...</span></p>
+                        <p><strong>Screen Signature:</strong> <span id="user-screen-sig">Loading...</span></p>
+                        <p><strong>Timezone Offset:</strong> <span id="user-tz-offset">Loading...</span></p>
+                        <p><strong>Fingerprint ID:</strong> <span id="user-fingerprint-id">Loading...</span></p>
+                    </div>
+                </div>
+
+                <div class="info-card full-width-card" style="border-color: #ff6b6b;">
+                    <h3>⚠️ Advanced Tracking (Invasive)</h3>
+                    <div class="info-content advanced-grid">
+                        <div class="metric-box">
+                            <div class="metric-icon">📹</div>
+                            <strong>Media Devices</strong>
+                            <span id="user-media-devices">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🌐</div>
+                            <strong>WebRTC IP</strong>
+                            <span id="user-webrtc-ip">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">📋</div>
+                            <strong>Clipboard</strong>
+                            <span id="user-clipboard">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">⌨️</div>
+                            <strong>Keystroke</strong>
+                            <span id="user-keystroke">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🖱️</div>
+                            <strong>Mouse</strong>
+                            <span id="user-mouse-behavior">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🚀</div>
+                            <strong>Network</strong>
+                            <span id="user-network-speed">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">⏱️</div>
+                            <strong>Idle Time</strong>
+                            <span id="user-idle-time">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">👁️</div>
+                            <strong>Tab Visibility</strong>
+                            <span id="user-tab-visibility">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">📊</div>
+                            <strong>Scroll Depth</strong>
+                            <span id="user-scroll-depth">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">✂️</div>
+                            <strong>Copy/Cut</strong>
+                            <span id="user-copy-events">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🔔</div>
+                            <strong>Notifications</strong>
+                            <span id="user-notification-perm">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🎮</div>
+                            <strong>GPU</strong>
+                            <span id="user-gpu">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🗣️</div>
+                            <strong>Voices</strong>
+                            <span id="user-speech-voices">Loading...</span>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-icon">🎮</div>
+                            <strong>Gamepads</strong>
+                            <span id="user-gamepads">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="privacy-note">
+                <p>🔒 <strong>Privacy Note:</strong> This page demonstrates what information websites can collect,
+                    including visitor analytics, browser fingerprinting, and <strong style="color: #ff6b6b;">advanced
+                        invasive tracking techniques</strong>.
+                    The "Advanced Tracking" section shows ethically questionable methods like WebRTC IP leaking,
+                    clipboard monitoring, keystroke pattern analysis, and behavioral profiling. All data is processed
+                    <strong>client-side
+                        only</strong> and is <strong>not stored on any server</strong>. Session data uses your browser's
+                    sessionStorage/localStorage and is never transmitted. This is purely educational to show the extent
+                    of browser tracking capabilities and <strong>raise awareness about digital privacy</strong>.
+                    <strong>Your privacy matters!</strong>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
