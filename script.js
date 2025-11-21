@@ -1009,6 +1009,155 @@ function activateCoffeeMode() {
     console.log('%c☕ COFFEE MODE ACTIVATED!', 'font-size: 16px; color: #FFD1A1; font-weight: bold;');
 }
 
+// Easter Egg: Console Command
+window.unlockSecrets = function () {
+    const overlay = document.createElement('div');
+    overlay.className = 'celebration-overlay';
+    overlay.innerHTML = `
+        <div class="celebration-content">
+            <h2>💻 HACKERMAN! 💻</h2>
+            <p>You found the console command!</p>
+            <p style="font-size: 3rem; margin: 1rem 0;">🔓✨🔓</p>
+            <p>"Console.log('You are awesome!');"</p>
+            <button onclick="this.parentElement.parentElement.remove()">I'm in!</button>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    console.log('%c💻 SECRETS UNLOCKED!', 'font-size: 16px; color: #00FF00; font-weight: bold; background: #000;');
+    return "Access Granted - Welcome to the inner circle.";
+};
+
+// Easter Egg: Matrix Mode (type "matrix")
+let matrixKeys = [];
+const matrixCode = ['m', 'a', 't', 'r', 'i', 'x'];
+
+document.addEventListener('keypress', (e) => {
+    matrixKeys.push(e.key.toLowerCase());
+    matrixKeys = matrixKeys.slice(-6);
+
+    if (matrixKeys.join('') === matrixCode.join('')) {
+        toggleMatrixMode();
+        matrixKeys = [];
+    }
+});
+
+function toggleMatrixMode() {
+    const isMatrix = document.body.classList.toggle('matrix-mode');
+
+    if (isMatrix) {
+        // Add matrix styles dynamically if not in CSS
+        if (!document.getElementById('matrix-style')) {
+            const style = document.createElement('style');
+            style.id = 'matrix-style';
+            style.textContent = `
+                .matrix-mode {
+                    background-color: #000 !important;
+                    color: #00FF00 !important;
+                    font-family: 'Courier New', monospace !important;
+                }
+                .matrix-mode * {
+                    color: #00FF00 !important;
+                    border-color: #00FF00 !important;
+                    box-shadow: none !important;
+                }
+                .matrix-mode .skill, .matrix-mode .experience-item {
+                    background: #001100 !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        const overlay = document.createElement('div');
+        overlay.className = 'celebration-overlay';
+        overlay.innerHTML = `
+            <div class="celebration-content" style="background: #000; border: 2px solid #00FF00; color: #00FF00;">
+                <h2>💊 THE MATRIX HAS YOU 💊</h2>
+                <p>Welcome to the real world.</p>
+                <p style="font-size: 3rem; margin: 1rem 0;">🕶️🟢🕶️</p>
+                <p>"There is no spoon."</p>
+                <button onclick="this.parentElement.parentElement.remove()" style="background: #00FF00; color: #000;">Wake Up</button>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+        console.log('%c💊 MATRIX MODE ACTIVATED!', 'font-size: 16px; color: #00FF00; background: #000; font-weight: bold;');
+    } else {
+        console.log('%c💊 MATRIX MODE DEACTIVATED!', 'font-size: 16px; color: #00FF00; background: #000; font-weight: bold;');
+    }
+}
+
+// Easter Egg: Binary Input (type "0100100001001001" - "HI" in binary)
+let binaryKeys = [];
+const binaryCode = "0100100001001001"; // HI
+
+document.addEventListener('keypress', (e) => {
+    if (e.key === '0' || e.key === '1') {
+        binaryKeys.push(e.key);
+        binaryKeys = binaryKeys.slice(-16);
+
+        if (binaryKeys.join('') === binaryCode) {
+            activateBinaryMode();
+            binaryKeys = [];
+        }
+    } else {
+        // Reset if non-binary key pressed (optional, makes it harder)
+        // binaryKeys = []; 
+    }
+});
+
+function activateBinaryMode() {
+    const overlay = document.createElement('div');
+    overlay.className = 'celebration-overlay';
+    overlay.innerHTML = `
+        <div class="celebration-content">
+            <h2>🤖 ROBOT GREETING! 🤖</h2>
+            <p>01001000 01001001 (HI)</p>
+            <p style="font-size: 3rem; margin: 1rem 0;">👾✨👾</p>
+            <p>"You speak my language!"</p>
+            <button onclick="this.parentElement.parentElement.remove()">01001111 01001011 (OK)</button>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    console.log('%c🤖 BINARY MESSAGE RECEIVED!', 'font-size: 16px; color: #C0C0C0; font-weight: bold;');
+}
+
+// Easter Egg: Long Press on Title (5 seconds)
+const mainTitle = document.querySelector('h1');
+let longPressTimer;
+
+if (mainTitle) {
+    mainTitle.addEventListener('mousedown', () => {
+        longPressTimer = setTimeout(activateTimeMaster, 5000);
+    });
+
+    mainTitle.addEventListener('touchstart', () => {
+        longPressTimer = setTimeout(activateTimeMaster, 5000);
+    });
+
+    const clearTimer = () => {
+        if (longPressTimer) clearTimeout(longPressTimer);
+    };
+
+    mainTitle.addEventListener('mouseup', clearTimer);
+    mainTitle.addEventListener('mouseleave', clearTimer);
+    mainTitle.addEventListener('touchend', clearTimer);
+}
+
+function activateTimeMaster() {
+    const overlay = document.createElement('div');
+    overlay.className = 'celebration-overlay';
+    overlay.innerHTML = `
+        <div class="celebration-content">
+            <h2>⏳ TIME MASTER! ⏳</h2>
+            <p>You have the patience of a saint!</p>
+            <p style="font-size: 3rem; margin: 1rem 0;">🕰️✨🕰️</p>
+            <p>"Good things come to those who wait."</p>
+            <button onclick="this.parentElement.parentElement.remove()">Finally!</button>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    console.log('%c⏳ TIME MASTER ACHIEVEMENT!', 'font-size: 16px; color: #FFD700; font-weight: bold;');
+}
+
 // ==================== ABOUT YOU SECTION ====================
 
 // Fetch IP and location information
