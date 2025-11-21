@@ -1014,28 +1014,28 @@ function activateCoffeeMode() {
 // Fetch IP and location information
 async function fetchUserInfo() {
     try {
-        // Using ip-api.com for IP and geolocation data (free, supports CORS)
-        const response = await fetch('http://ip-api.com/json/?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query');
+        // Using ipwho.is for IP and geolocation data (free, supports HTTPS & CORS)
+        const response = await fetch('https://ipwho.is/');
         const data = await response.json();
 
-        if (data.status === 'success') {
+        if (data.success) {
             // Location data
-            document.getElementById('user-ip').textContent = data.query || 'Unknown';
-            document.getElementById('user-country').textContent = `${data.country || 'Unknown'} ${getCountryFlag(data.countryCode)}`;
+            document.getElementById('user-ip').textContent = data.ip || 'Unknown';
+            document.getElementById('user-country').textContent = `${data.country || 'Unknown'} ${getCountryFlag(data.country_code)}`;
             document.getElementById('user-city').textContent = data.city || 'Unknown';
-            document.getElementById('user-region').textContent = data.regionName || 'Unknown';
-            document.getElementById('user-timezone').textContent = data.timezone || 'Unknown';
-            document.getElementById('user-postal').textContent = data.zip || 'Unknown';
+            document.getElementById('user-region').textContent = data.region || 'Unknown';
+            document.getElementById('user-timezone').textContent = data.timezone?.id || 'Unknown';
+            document.getElementById('user-postal').textContent = data.postal || 'Unknown';
 
             // Network & ISP data
-            document.getElementById('user-isp').textContent = data.isp || 'Unknown';
-            document.getElementById('user-org').textContent = data.org || 'Unknown';
-            document.getElementById('user-asn').textContent = data.as || 'Unknown';
-            document.getElementById('user-lat').textContent = data.lat ? data.lat.toFixed(4) : 'Unknown';
-            document.getElementById('user-lon').textContent = data.lon ? data.lon.toFixed(4) : 'Unknown';
+            document.getElementById('user-isp').textContent = data.connection?.isp || 'Unknown';
+            document.getElementById('user-org').textContent = data.connection?.org || 'Unknown';
+            document.getElementById('user-asn').textContent = data.connection?.asn ? `AS${data.connection.asn}` : 'Unknown';
+            document.getElementById('user-lat').textContent = data.latitude ? data.latitude.toFixed(4) : 'Unknown';
+            document.getElementById('user-lon').textContent = data.longitude ? data.longitude.toFixed(4) : 'Unknown';
 
             // Get currency from country code
-            const currency = getCurrencyFromCountry(data.countryCode);
+            const currency = getCurrencyFromCountry(data.country_code);
             document.getElementById('user-currency').textContent = currency;
         } else {
             throw new Error(data.message || 'API request failed');
