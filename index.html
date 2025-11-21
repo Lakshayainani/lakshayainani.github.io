@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+    🎉 CONGRATULATIONS! 🎉
+    You found the hidden message in the source code!
+    You're a true developer - always looking under the hood!
+    
+    Fun fact: This portfolio has 5+ Easter eggs. How many can you find?
+    
+    - Bug Hunt (5 bugs to find)
+    - Konami Code (↑↑↓↓←→←→BA)
+    - Secret Click Counter (click the title 10 times)
+    - Type "test" anywhere
+    - Double-click any skill
+    - Time-based console greeting
+    
+    Happy hunting! 🐛🎮
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -19,6 +35,7 @@
             <div class="navbar-links">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -29,11 +46,17 @@
         <!-- Automation-related icons will be added here -->
     </div>
 
+    <!-- Easter Egg: Bug Counter -->
+    <div class="bug-counter" id="bugCounter" style="display: none;">
+        <span class="bug-icon">🐛</span>
+        <span id="bugCount">0</span>/5
+    </div>
+
     <div class="container">
         <header id="hero">
             <img src="image.png" alt="Profile Picture" class="profile-image">
             <h1>Lakshaya Inani</h1>
-            <p class="title">Senior Software Development Engineer in Test</p>
+            <p class="title"><span class="typing-text">Senior Software Development Engineer in Test</span></p>
             <div class="social-links">
                 <a href="https://github.com/lakshayainani" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/lakshayainani/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -43,7 +66,7 @@
             </div>
         </header>
 
-        <section id="about">
+        <section id="about" class="reveal">
             <h2>About Me</h2>
             <p>
                 As a <b>Senior SDET </b> at TickerTape</a>, a Fintech
@@ -60,32 +83,95 @@
                 technologies and skills. I also have some experience working with Databases (SQL, noSQL), performance
                 and load testing.
             </p>
+            <!-- Hidden Bug #1 -->
+            <span class="hidden-bug" data-bug="1" title="You found a bug! Click to squash it!">🐞</span>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="reveal">
             <h2>Skills</h2>
-            <div class="skills">
-                <span class="skill">Java</span>
-                <span class="skill">Selenium</span>
-                <span class="skill">Python</span>
-                <span class="skill">Test Automation</span>
-                <span class="skill">pytest</span>
-                <span class="skill">Maestro</span>
-                <span class="skill">Jenkins</span>
-                <span class="skill">Ansible</span>
-                <span class="skill">Docker</span>
-                <span class="skill">Git</span>
-                <span class="skill">API Testing</span>
-                <span class="skill">API Automation</span>
-                <span class="skill">Mobile Testing</span>
-                <span class="skill">Agile Methodologies</span>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skills">
+                        <span class="skill"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill"><i class="fas fa-code"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Automation & Testing</h3>
+                    <div class="skills">
+                        <span class="skill"><i class="fas fa-robot"></i> Selenium</span>
+                        <span class="skill"><i class="fas fa-vial"></i> Test Automation</span>
+                        <span class="skill"><i class="fas fa-flask"></i> pytest</span>
+                        <span class="skill"><i class="fas fa-mobile-alt"></i> Appium</span>
+                        <span class="skill"><i class="fas fa-check-double"></i> API Testing</span>
+                        <span class="skill"><i class="fas fa-mobile"></i> Mobile Testing</span>
+                        <span class="skill"><i class="fas fa-magic"></i> Maestro</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & DevOps</h3>
+                    <div class="skills">
+                        <span class="skill"><i class="fab fa-jenkins"></i> Jenkins</span>
+                        <span class="skill"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="skill"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill"><i class="fas fa-server"></i> Ansible</span>
+                    </div>
+                </div>
             </div>
+            <!-- Hidden Bug #2 -->
+            <span class="hidden-bug" data-bug="2" title="You found a bug! Click to squash it!">🐞</span>
         </section>
 
-        <section id="experience">
+        <section id="projects" class="reveal">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Placeholder Projects -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website built with HTML, CSS, and JavaScript to showcase my skills and
+                            experience.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>API Automation Framework</h3>
+                        <p>A robust API automation framework using Python and pytest, achieving 90% test coverage.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>pytest</span>
+                            <span>API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>UI Automation Suite</h3>
+                        <p>Scalable UI automation suite using Selenium and Playwright, reducing manual testing effort.
+                        </p>
+                        <div class="project-tags">
+                            <span>Selenium</span>
+                            <span>Playwright</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hidden Bug #3 -->
+            <span class="hidden-bug" data-bug="3" title="You found a bug! Click to squash it!">🐞</span>
+        </section>
+
+        <section id="experience" class="reveal">
             <h2>Experience</h2>
             <div class="experience">
-                 <div class="experience-item">
+                <div class="experience-item">
                     <h3>Senior SDET</h3>
                     <div class="company-info">
                         <p class="company"><a href="https://www.smallcase.com/" target="_blank">Smallcase</a>(<a
@@ -95,8 +181,10 @@
                     <ul>
                         <li><b>API Automation</b>: Migrationg of automation from Jenkins to Github Actions.
                         </li>
-                        <li><b>UI Automation</b>: <ul>Did PoC and framework setup for Playwright-Python UI Automation framework.</ul> 
-                                                <ul>Added more scenarios to the automated test suites and made it more reliable.</ul></li>
+                        <li><b>UI Automation</b>: <ul>Did PoC and framework setup for Playwright-Python UI Automation
+                                framework.</ul>
+                            <ul>Added more scenarios to the automated test suites and made it more reliable.</ul>
+                        </li>
                         <li><b>LAMF</b>: Key QA contributor for the LAMF feature, ensuring quality through
                             cross-functional teamwork and contributing to positive revenue impact.</li>
                         <li><b>PL</b>: Key QA contributor for the Personal Loan feature, ensuring quality through
@@ -181,15 +269,19 @@
                     </ul>
                 </div>
             </div>
+            <!-- Hidden Bug #4 -->
+            <span class="hidden-bug" data-bug="4" title="You found a bug! Click to squash it!">🐞</span>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="reveal">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:lakshaya.inani@gmail.com">lakshaya.inani@gmail.com</a></p>
             <p>Phone: <a href="tel:+919741040399">+91-9741040399</a></p>
             <p>Location: Bangalore, India</p>
             <p><a href="https://www.linkedin.com/in/lakshayainani/message/" target="_blank" class="linkedin-msg">👋 Say
                     Hi on LinkedIn</a></p>
+            <!-- Hidden Bug #5 -->
+            <span class="hidden-bug" data-bug="5" title="You found a bug! Click to squash it!">🐞</span>
         </section>
     </div>
 
