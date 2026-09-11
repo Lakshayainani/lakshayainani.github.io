@@ -1,326 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<!-- 
-    🎉 CONGRATULATIONS! 🎉
-    You found the hidden message in the source code!
-    You're a true developer - always looking under the hood!
-    
-    Fun fact: This portfolio has 21+ Easter eggs. How many can you find?
-    
-    ORIGINAL EASTER EGGS:
-    - Bug Hunt (5 bugs to find - look for wiggling ones!)
-    - Konami Code (↑↑↓↓←→←→BA)
-    - Secret Click Counter (click the title 10 times)
-    - Type "test" anywhere
-    - Double-click any skill
-    - Time-based console greeting
-    
-    INTERACTIVE EASTER EGGS:
-    - Secret QA Shortcut (Ctrl+Shift+Q)
-    - Triple-click the profile image
-    - Hover on "LAKSHAYA" brand for 5 seconds
-    - Type "debug" anywhere
-    - Click any experience card 3 times
-    - Scroll to the bottom 3 times
-    - Right-click anywhere for QA tips
-    
-    NEW EASTER EGGS:
-    - Press Q and A keys together
-    - Click social icons in order: GitHub → LinkedIn → Email
-    - Type "automation" anywhere
-    - Press Escape 3 times quickly
-    - Click 5 skills rapidly (within 2 seconds)
-    - Stay idle for 30 seconds
-    - Spam click anywhere (10 clicks in 1 second)
-    - Type "coffee" anywhere
-    
-    Happy hunting! 🐛🎮✨
--->
-
+<!-- Curious enough to read the source? You're my kind of person. Try the Konami code. -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakshaya Inani - Software Testing & Automation Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111310"><meta name="description" content="Lakshaya Inani — Senior SDET in Bangalore. Building reliable software through thoughtful automation, API testing, and curiosity.">
+<title>Lakshaya Inani — Engineering confidence.</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111310'/%3E%3Ctext x='10' y='44' font-family='monospace' font-size='34' font-weight='bold' fill='%23c1f17e'%3Eli%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
 </head>
-
 <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#hero" class="navbar-brand">LAKSHAYA</a>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="navbar-links">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="floating-icons">
-        <!-- Automation-related icons will be added here -->
-    </div>
-
-    <!-- Easter Egg: Bug Counter -->
-    <div class="bug-counter" id="bugCounter" style="display: none;">
-        <span class="bug-icon">🐛</span>
-        <span id="bugCount">0</span>/5
-    </div>
-
-    <div class="container">
-        <header id="hero">
-            <img src="image.png" alt="Profile Picture" class="profile-image">
-            <h1>Lakshaya Inani</h1>
-            <p class="title"><span class="typing-text">Senior Software Development Engineer in Test</span></p>
-            <div class="social-links">
-                <a href="https://github.com/lakshayainani" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/lakshayainani/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:lakshaya.inani@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://lakshayainani.com" target="_blank"><i class="fas fa-globe"></i></a>
-                <a href="tel:+919741040399"><i class="fas fa-phone"></i></a>
-            </div>
-        </header>
-
-        <section id="about" class="reveal">
-            <h2>About Me</h2>
-            <p>
-                As a <b>Senior SDET </b> at TickerTape</a>, a Fintech
-                platform that provides insights and analysis for stock market investors, I am responsible for ensuring
-                the best quality experience for the users of the app and website. I use Selenium Automation, Python,
-                Rest API Testing, Mobile testing, Appium and jenkins to design, develop, and execute test cases and
-                scenarios, as well as to identify and report bugs and issues.
-            </p>
-            <p>
-                I have a BE degree in <b>Computer Software Engineering</b> from MVJ College of Engineering, where I
-                learned the
-                fundamentals of software development, data structures, algorithms, and databases. I also have multiple
-                certifications in Python, Docker, and Java which demonstrate my passion and curiosity for learning new
-                technologies and skills. I also have some experience working with Databases (SQL, noSQL), performance
-                and load testing.
-            </p>
-            <!-- Hidden Bug #1 -->
-            <span class="hidden-bug" data-bug="1" title="You found a bug! Click to squash it!">🐞</span>
-        </section>
-
-        <section id="skills" class="reveal">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skills">
-                        <span class="skill"><i class="fab fa-java"></i> Java</span>
-                        <span class="skill"><i class="fab fa-python"></i> Python</span>
-                        <span class="skill"><i class="fas fa-code"></i> JavaScript</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Automation & Testing</h3>
-                    <div class="skills">
-                        <span class="skill"><i class="fas fa-robot"></i> Selenium</span>
-                        <span class="skill"><i class="fas fa-vial"></i> Test Automation</span>
-                        <span class="skill"><i class="fas fa-flask"></i> pytest</span>
-                        <span class="skill"><i class="fas fa-mobile-alt"></i> Appium</span>
-                        <span class="skill"><i class="fas fa-check-double"></i> API Testing</span>
-                        <span class="skill"><i class="fas fa-mobile"></i> Mobile Testing</span>
-                        <span class="skill"><i class="fas fa-magic"></i> Maestro</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & DevOps</h3>
-                    <div class="skills">
-                        <span class="skill"><i class="fab fa-jenkins"></i> Jenkins</span>
-                        <span class="skill"><i class="fab fa-docker"></i> Docker</span>
-                        <span class="skill"><i class="fab fa-git-alt"></i> Git</span>
-                        <span class="skill"><i class="fas fa-server"></i> Ansible</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Hidden Bug #2 -->
-            <span class="hidden-bug" data-bug="2" title="You found a bug! Click to squash it!">🐞</span>
-        </section>
-
-        <section id="projects" class="reveal">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <!-- Placeholder Projects -->
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Portfolio Website</h3>
-                        <p>A personal portfolio website built with HTML, CSS, and JavaScript to showcase my skills and
-                            experience.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>API Automation Framework</h3>
-                        <p>A robust API automation framework using Python and pytest, achieving 90% test coverage.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>pytest</span>
-                            <span>API</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>UI Automation Suite</h3>
-                        <p>Scalable UI automation suite using Selenium and Playwright, reducing manual testing effort.
-                        </p>
-                        <div class="project-tags">
-                            <span>Selenium</span>
-                            <span>Playwright</span>
-                            <span>Python</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Hidden Bug #3 -->
-            <span class="hidden-bug" data-bug="3" title="You found a bug! Click to squash it!">🐞</span>
-        </section>
-
-        <section id="experience" class="reveal">
-            <h2>Experience</h2>
-            <div class="experience">
-                <div class="experience-item">
-                    <h3>Senior SDET</h3>
-                    <div class="company-info">
-                        <p class="company"><a href="https://www.smallcase.com/" target="_blank">Smallcase</a>(<a
-                                href="https://www.tickertape.in/" target="_blank">Tickertape</a>)</p>
-                        <p class="duration">Apr 2025 - Present</p>
-                    </div>
-                    <ul>
-                        <li><b>API Automation</b>: Migrationg of automation from Jenkins to Github Actions.
-                        </li>
-                        <li><b>UI Automation</b>: <ul>Did PoC and framework setup for Playwright-Python UI Automation
-                                framework.</ul>
-                            <ul>Added more scenarios to the automated test suites and made it more reliable.</ul>
-                        </li>
-                        <li><b>LAMF</b>: Key QA contributor for the LAMF feature, ensuring quality through
-                            cross-functional teamwork and contributing to positive revenue impact.</li>
-                        <li><b>PL</b>: Key QA contributor for the Personal Loan feature, ensuring quality through
-                            cross-functional teamwork and contributing to positive revenue impact.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>SDET 2</h3>
-                    <div class="company-info">
-                        <p class="company"><a href="https://www.smallcase.com/" target="_blank">Smallcase</a>(<a
-                                href="https://www.tickertape.in/" target="_blank">Tickertape</a>)</p>
-                        <p class="duration">May 2023 - Mar 2025</p>
-                    </div>
-                    <ul>
-                        <li><b>API Automation</b>: Achieved over 90% API test coverage, significantly improving
-                            reliability.
-                        </li>
-                        <li><b>API Efficiency</b>: Optimized API automation, reducing execution time by over 50% for
-                            faster
-                            feedback.</li>
-                        <li><b>UI Automation</b>: Contributed to the growth of the UI automation framework in
-                            collaboration
-                            with the team.</li>
-                        <li><b>LAMF Feature</b>: Key QA contributor for the LAMF feature, ensuring quality through
-                            cross-functional teamwork and contributing to positive revenue impact.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>SDET</h3>
-                    <div class="company-info">
-                        <p class="company"><a href="https://www.smallcase.com/" target="_blank">Smallcase</a>(<a
-                                href="https://www.tickertape.in/" target="_blank">Tickertape</a>)</p>
-                        <p class="duration">Jan 2022 - May 2023</p>
-                    </div>
-                    <ul>
-                        <li>As part of the QA Team, I ensured the best possible user experience for the Tickertape App
-                            and
-                            Website.</li>
-                        <li>I conducted the Proof of Concept (PoC) to select the appropriate automation framework for
-                            API automation and did the setup process.</li>
-                        <li>I enhanced the coverage of UI automation execution.</li>
-                        <li>I tested and delivered numerous high-quality features for the Tickertape app and website.
-                        </li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>System/Software Engineer - 2</h3>
-                    <div class="company-info">
-                        <p class="company"><a href="https://www.microfocus.com/" target="_blank">Micro Focus</a></p>
-                        <p class="duration">Oct 2021 - Dec 2021</p>
-                    </div>
-                    <ul>
-                        <li>Quality Assurance Engineer for NetIQ Access Manager(NAM) and Risk Service</li>
-                        <li>UI Testing and Automation</li>
-                        <li>Rest API Testing and Automation</li>
-                        <li>Deployment Testing and Automation</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>System/Software Engineer - 1</h3>
-                    <div class="company-info">
-                        <p class="company"><a href="https://www.microfocus.com/" target="_blank">Micro Focus</a></p>
-                        <p class="duration">Aug 2019 - Sep 2021</p>
-                    </div>
-                    <ul>
-                        <li>Quality Assurance Engineer for NetIQ Access Manager(NAM)</li>
-                        <li>UI Testing and Automation</li>
-                        <li>Rest API Testing and Automation</li>
-                        <li>Deployment Testing and Automation</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3>Software Engineering Intern</h3>
-                    <div class="company-info">
-                        <p class="company"><a href="https://www.microfocus.com/" target="_blank">Micro Focus</a></p>
-                        <p class="duration">Jan 2019 - July 2019</p>
-                    </div>
-                    <ul>
-                        <li>Learned about Software Development Lifecycle</li>
-                        <li>Studied cybersecurity</li>
-                        <li>Learned Selenium Automation Basics</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Hidden Bug #4 -->
-            <span class="hidden-bug" data-bug="4" title="You found a bug! Click to squash it!">🐞</span>
-        </section>
-
-        <section id="contact" class="reveal">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:lakshaya.inani@gmail.com">lakshaya.inani@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919741040399">+91-9741040399</a></p>
-            <p>Location: Bangalore, India</p>
-            <p><a href="https://www.linkedin.com/in/lakshayainani/message/" target="_blank" class="linkedin-msg">👋 Say
-                    Hi on LinkedIn</a></p>
-            <!-- Hidden Bug #5 -->
-            <span class="hidden-bug" data-bug="5" title="You found a bug! Click to squash it!">🐞</span>
-
-            <!-- About You CTA -->
-            <div class="about-you-cta">
-                <h3>🔍 Curious What Websites Know About You?</h3>
-                <p>Discover the surprising amount of data websites can collect - from your location and device specs to
-                    browser fingerprinting and visitor analytics.</p>
-                <a href="about-you.html" class="cta-button">
-                    <span class="cta-icon">🕵️</span>
-                    <span class="cta-text">
-                        <strong>See What I Know About You</strong>
-                        <small>52+ data points revealed</small>
-                    </span>
-                    <span class="cta-arrow">→</span>
-                </a>
-            </div>
-        </section>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap site-header"><a class="brand" href="#" aria-label="Lakshaya Inani home"><span class="wordmark" aria-hidden="true">li<span>.</span></span><span class="brand-name">Lakshaya Inani</span></a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a></nav><a class="nav-contact" href="#contact">Let’s talk <span>↗</span></a></header>
+<main id="main">
+<section class="wrap hero" aria-labelledby="hero-title">
+<div class="hero-copy"><p class="eyebrow"><span class="dot"></span> SENIOR SDET · BANGALORE, INDIA</p><h1 id="hero-title">Good software.<br><em>Zero guesswork.</em></h1><p class="intro">Hey, I’m <strong>Lakshaya Inani.</strong> I break things on purpose<br class="desktop"> so your users don’t have to.</p><p class="hero-description">Building confidence in every release through thoughtful<br class="desktop"> testing, useful automation, and relentless curiosity.</p><div class="hero-actions"><a href="#work" class="button primary">Explore my work <span>↘</span></a><a class="text-link" href="https://github.com/lakshayainani" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div><div class="currently"><span class="mini-mark">t.</span><span>Currently engineering quality at <strong>Tickertape</strong></span></div></div>
+<div class="hero-art"><div class="orbit" aria-hidden="true"><div></div><span>QUALITY IS A MINDSET</span><b>+</b></div><div class="test-window"><div class="window-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>quality.spec.py</span><span>⌘</span></div><div class="code"><div><span class="line">01</span><span class="purple">def</span> <span class="accent">test_every_detail</span>():</div><div><span class="line">02</span>  product = build(<span class="sand">"with care"</span>)</div><div><span class="line">03</span>  <span class="purple">assert</span> product.is_reliable()</div><div><span class="line">04</span>  <span class="purple">assert</span> users.are_happy()</div><div><span class="line">05</span>  <span class="muted"># yes, even the edge cases.</span></div></div><div class="test-output" id="test-output"><p><span>✓</span> Curiosity initialized</p><p><span>✓</span> Edge cases considered</p><p><span>✓</span> Confidence shipped</p></div><div class="window-bottom"><span id="test-summary" role="status">3 passed <span class="muted">· illustrative test run</span></span><button id="run-tests">Run again ↻</button></div></div><div class="floating-note"><span class="dot"></span> A little skeptical. A lot curious.</div><button class="bug hero-bug" data-bug="1" aria-label="Catch hidden bug 1" title="Wait… is that a bug?"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 2 3m6-3-2 3M5 10H2m3 5H2m5 4-3 3m15-12h3m-3 5h3m-5 4 3 3M8 8a4 4 0 0 1 8 0v1H8Z"/><rect x="5" y="9" width="14" height="11" rx="5"/><path d="M12 9v11"/></svg></button></div>
+<div class="hero-bottom"><span>ENGINEER BY TRADE. EXPLORER BY DEFAULT.</span><a href="#about">A little more about me <span>↓</span></a></div>
+</section>
+<div class="expertise-strip"><div class="wrap"><span class="expertise-label">MY FOCUS</span><ul aria-label="Areas of expertise"><li>API automation</li><li>Web automation</li><li>Mobile testing</li><li>CI/CD automation</li></ul></div></div>
+<section class="section wrap" id="about" aria-labelledby="about-title"><div class="section-label"><span>01 / THE PERSON</span><span>MORE THAN A TEST CASE</span></div><div class="about-grid"><div class="portrait"><img src="image.png" width="1272" height="1304" alt="Lakshaya Inani outdoors, wearing sunglasses" loading="lazy"><div><span>LAKSHAYA INANI</span><span>↗</span></div></div><div class="about-copy"><h2 id="about-title">A builder’s mindset.<br>A tester’s <em>instinct.</em></h2><p>I’m a Senior Software Development Engineer in Test at Tickertape, part of smallcase. I help make complex financial products feel dependable, on the web and in your pocket.</p><p>My sweet spot is turning “what if?” into a repeatable test. From APIs and mobile flows to deployment pipelines, I care about finding the right problems and making the next release better.</p><p class="education">BE, Computer Software Engineering<br><span>MVJ College of Engineering</span></p><a class="text-link" href="https://www.linkedin.com/in/lakshayainani/" target="_blank" rel="noopener noreferrer">The longer story on LinkedIn ↗</a></div></div><div class="stats"><div><strong>90<span>%+</span></strong><span>API test coverage achieved</span></div><div><strong>50<span>%+</span></strong><span>Faster API test execution</span></div><div><strong>API<span> + </span>Web<span> + </span>Mobile</strong><span>Quality across the whole experience</span></div></div></section>
+<section class="section wrap" id="work" aria-labelledby="work-title"><div class="section-label"><span>02 / SELECTED WORK</span><span>LESS FRICTION. MORE CONFIDENCE.</span></div><div class="section-heading"><h2 id="work-title">Built to <em>hold up.</em></h2><p>A few ways I make quality happen.</p></div><div class="work-grid">
+<article class="work-card"><div class="project-visual" aria-hidden="true"><span class="visual-caption">REQUEST → VALIDATE → TRUST</span><div class="endpoint"><span>GET</span> /api/confidence <b>200 ↗</b></div><div class="api-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-foot">coverage: <b>90%+</b></span></div><div class="work-copy"><span class="eyebrow">01 / API ENGINEERING</span><h3>Trust, at every endpoint.</h3><p>API automation with broader coverage and over 50% less execution time. Faster feedback when it matters.</p><div class="tags"><span>Python</span><span>pytest</span><span>REST APIs</span></div></div></article>
+<article class="work-card"><div class="project-visual ui-visual" aria-hidden="true"><span class="visual-caption">ONE EXPERIENCE. EVERY SCREEN.</span><div class="mini-browser"><div>● ● ●</div><i></i><i></i><b>✓ All looking good</b></div><div class="mini-phone"><i></i><span>✓</span><i></i></div></div><div class="work-copy"><span class="eyebrow">02 / UI & MOBILE AUTOMATION</span><h3>Real journeys. Reliable tests.</h3><p>Playwright framework setup and growing automated coverage for the flows people actually use.</p><div class="tags"><span>Playwright</span><span>Selenium</span><span>Appium</span></div></div></article>
+<article class="work-card"><div class="project-visual pipeline-visual" aria-hidden="true"><span class="visual-caption">A BETTER PATH TO PRODUCTION</span><div class="pipeline"><span>⌘<small>COMMIT</small></span><i></i><span>✓<small>TEST</small></span><i></i><span>↗<small>SHIP</small></span></div><div class="pipeline-status"><span class="dot"></span> Less manual. More repeatable.</div></div><div class="work-copy"><span class="eyebrow">03 / DEVELOPER EXPERIENCE</span><h3>Make the good path easy.</h3><p>Moving API automation from Jenkins to GitHub Actions to bring quality checks closer to the code.</p><div class="tags"><span>GitHub Actions</span><span>Jenkins</span><span>CI/CD</span></div></div></article>
+</div></section>
+<section class="section wrap experience" id="experience" aria-labelledby="experience-title"><div class="section-label"><span>03 / THE JOURNEY</span><span>ALWAYS ITERATING</span></div><div class="experience-grid"><div><h2 id="experience-title">Progress,<br> one release<br> <em>at a time.</em></h2><p class="muted">From identity and access management<br>to the everyday investor’s toolkit.</p><button class="bug" data-bug="2" aria-label="Catch hidden bug 2" title="This one escaped the regression suite."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 2 3m6-3-2 3M5 10H2m3 5H2m5 4-3 3m15-12h3m-3 5h3m-5 4 3 3M8 8a4 4 0 0 1 8 0v1H8Z"/><rect x="5" y="9" width="14" height="11" rx="5"/><path d="M12 9v11"/></svg></button></div><div class="timeline">
+<article class="role current"><div class="role-top"><h3>Senior SDET</h3><span class="now-badge">NOW</span></div><p class="company">Tickertape · smallcase</p><p class="date">APR 2025 — PRESENT</p><p>Building reliable UI automation, evolving CI workflows, and helping deliver lending experiences with confidence.</p></article>
+<article class="role"><h3>SDET 2</h3><p class="company">Tickertape · smallcase</p><p class="date">MAY 2023 — MAR 2025</p><p>Expanded API coverage beyond 90%, cut execution time by over 50%, and strengthened UI automation.</p></article>
+<article class="role"><h3>SDET</h3><p class="company">Tickertape · smallcase</p><p class="date">JAN 2022 — MAY 2023</p><p>Established the API automation framework and tested end-to-end experiences across the app and website.</p></article>
+<article class="role"><h3>Software Engineer I → II</h3><p class="company">Micro Focus</p><p class="date">AUG 2019 — DEC 2021</p><p>UI, REST API, and deployment testing for NetIQ Access Manager and Risk Service.</p></article>
+<article class="role"><h3>Software Engineering Intern</h3><p class="company">Micro Focus</p><p class="date">JAN 2019 — JUL 2019</p><p>The beginning: software development, cybersecurity, and my first Selenium tests.</p></article>
+</div></div></section>
+<section class="section wrap" id="skills" aria-labelledby="skills-title"><div class="section-label"><span>04 / THE TOOLKIT</span><span>THE RIGHT TOOL FOR THE PROBLEM</span></div><div class="section-heading"><h2 id="skills-title">My everyday <em>carry.</em></h2><p>Tools I reach for to turn questions into confidence.</p></div><div class="tool-rows"><div><h3>Languages</h3><p>Python <span>Java</span> JavaScript</p></div><div><h3>Testing</h3><p>Playwright <span>Selenium</span> pytest <span>Appium</span> Maestro</p></div><div><h3>Infrastructure</h3><p>GitHub Actions <span>Jenkins</span> Docker <span>Git</span> Ansible</p></div><div><h3>Beyond the UI</h3><p>REST APIs <span>SQL / NoSQL</span> Performance testing</p></div></div></section>
+<section class="playground wrap" aria-labelledby="playground-title"><div class="playground-icon" aria-hidden="true">&gt;_</div><div><p class="eyebrow">FOR THE CURIOUS ONES</p><h2 id="playground-title">There’s more under the hood.</h2><p>A tiny terminal. A few hidden bugs. A little personality.</p></div><button class="button" data-open-terminal>Open the terminal ↗</button></section>
+<section class="contact section wrap" id="contact" aria-labelledby="contact-title"><div class="section-label"><span>05 / SAY HELLO</span><span class="location"><span class="dot"></span> BANGALORE · <time id="local-time">INDIA</time></span></div><p class="contact-prelude">Good things start with a conversation.</p><h2 id="contact-title">Let’s build something<br><em>worth testing.</em><a href="mailto:lakshaya.inani@gmail.com" aria-label="Email Lakshaya" class="contact-arrow">↗</a></h2><div class="contact-links"><a href="mailto:lakshaya.inani@gmail.com">lakshaya.inani@gmail.com ↗</a><div><a href="https://www.linkedin.com/in/lakshayainani/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/lakshayainani" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+<div class="sendoff">
+  <div class="sendoff-heading"><div><p class="eyebrow">A SMALL DETOUR BEFORE YOU GO</p><h3>Release a little <em>joy.</em></h3></div><button class="button" id="launch-plane">Launch a hello ↗</button></div>
+  <svg class="flight-map" viewBox="0 0 900 230" aria-hidden="true">
+    <defs><pattern id="flight-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="currentColor" opacity=".16"/></pattern></defs>
+    <rect width="900" height="230" fill="url(#flight-grid)"/>
+    <text x="450" y="135" text-anchor="middle" class="flight-watermark">HELLO, WORLD.</text>
+    <path class="flight-trail" d="M45 170 C180 170 175 45 325 65 S400 205 530 140 S690 30 855 65"/>
+    <circle cx="45" cy="170" r="5" class="flight-endpoint"/><circle cx="855" cy="65" r="13" class="flight-target"/><circle cx="855" cy="65" r="4" class="flight-endpoint"/>
+    <g id="paper-plane"><path d="M17 0 -12 -11 -5 0 -12 11Z"/><path d="M-5 0H17"/></g>
+    <text x="45" y="207" class="flight-label">YOU</text><text x="855" y="103" text-anchor="end" class="flight-label">A NEW POSSIBILITY</text>
+  </svg>
+  <p class="flight-message" id="flight-message" role="status">Even the smallest hello can go somewhere good.</p>
+</div></section>
+</main>
+<footer class="wrap"><span>© <span id="year">2026</span> Lakshaya Inani</span><span>Made with intent. Tested with curiosity.</span><button class="bug" data-bug="3" aria-label="Catch hidden bug 3" title="One last edge case."><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 4 2 3m6-3-2 3M5 10H2m3 5H2m5 4-3 3m15-12h3m-3 5h3m-5 4 3 3M8 8a4 4 0 0 1 8 0v1H8Z"/><rect x="5" y="9" width="14" height="11" rx="5"/><path d="M12 9v11"/></svg></button><button class="terminal-shortcut" data-open-terminal aria-label="Open terminal">&gt;_ <kbd>~</kbd></button></footer>
+<div class="toast" role="status" id="toast"></div>
+<dialog id="terminal" aria-labelledby="terminal-title"><div class="window-bar"><h2 id="terminal-title">lakshaya@portfolio: ~</h2><button id="close-terminal" aria-label="Close terminal">✕</button></div><div id="terminal-output" role="log" aria-live="polite"><p>Welcome, fellow explorer.</p><p>Type <b>help</b> to see what’s hiding here.</p></div><form id="terminal-form"><label for="command">visitor <span>❯</span></label><input id="command" name="command" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="120" aria-label="Terminal command"><button type="submit" aria-label="Run command">↵</button></form><div class="terminal-hint">ESC to close <span>Just a playground. No real commands run.</span></div></dialog>
+</body></html>
